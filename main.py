@@ -67,9 +67,14 @@ def privacy():
     return render_template("/privacy.html")
 
 
-@app.route("/signup.html", methods=["GET"])
+@app.route("/signup.html", methods=["POST", "GET"])
 def signup():
-    return render_template("/signup.html")
+    if request.method == "POST":
+        email = request.form["email"]
+        text = request.form["text"]
+        return render_template("/signup.html")
+    else:
+        return render_template("/signup.html")
 
 
 # example CSRF protected form

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
   <div class="row">
-    <h1>Sign Up</h1>
+    <h1>Login</h1>
   </div>
 </div>
 <div class="container">
@@ -15,6 +15,9 @@
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -24,14 +27,14 @@
           id="exampleInputPassword1"
         />
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1"
-          >Keep me signed in</label
-        >
-      </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+  </div>
+</div>
+<br />
+<div class="container">
+  <div class="row">
+    <p><b>Not a user?</b> <a href="signup.html">Sign Up</a></p>
   </div>
 </div>
 {% endblock %}
