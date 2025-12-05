@@ -67,6 +67,16 @@ def privacy():
     return render_template("/privacy.html")
 
 
+@app.route("/login.html", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        email = request.form["email"]
+        text = request.form["text"]
+        return render_template("/login.html")
+    else:
+        return render_template("/login.html")
+
+
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
     if request.method == "POST":
