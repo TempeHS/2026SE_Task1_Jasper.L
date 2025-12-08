@@ -2,11 +2,22 @@ import sqlite3 as sql
 import bcrypt
 
 
-### example
-def getUsers():
+def newUser(email, password):
     con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("SELECT * FROM id7-tusers")
+    cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
+    con.commit()
     con.close()
-    return cur
 
+
+def getUser(email, password):
+    con = sql.connect("databaseFiles/database.db")
+    cur = con.cursor()
+
+
+# def getUsers():
+#     con = sql.connect("databaseFiles/database.db")
+#     cur = con.cursor()
+#     cur.execute("SELECT * FROM id7-tusers")
+#     con.close()
+#     return cur

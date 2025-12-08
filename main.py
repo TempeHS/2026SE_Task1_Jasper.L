@@ -71,7 +71,7 @@ def privacy():
 def login():
     if request.method == "POST":
         email = request.form["email"]
-        text = request.form["text"]
+        password = request.form["password"]
         return render_template("/login.html")
     else:
         return render_template("/login.html")
@@ -81,7 +81,8 @@ def login():
 def signup():
     if request.method == "POST":
         email = request.form["email"]
-        text = request.form["text"]
+        password = request.form["password"]
+        dbHandler.newUser(email, password)
         return render_template("/signup.html")
     else:
         return render_template("/signup.html")

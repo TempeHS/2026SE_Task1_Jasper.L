@@ -22,9 +22,6 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .column {
@@ -32,15 +29,10 @@ body {
   gap: 1rem;
 }
 
-.column a {
-  white-space: nowrap;
-}
-
 .row {
 }
 
 main {
-  flex: 1;
 }
 
 footer {

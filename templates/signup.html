@@ -6,25 +6,34 @@
 </div>
 <div class="container">
   <div class="row">
-    <form>
+    <form action="/signup.html" method="POST" class="box">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label name="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
         <input
+          name="email"
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
+          id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+          placeholder="name@example.com"
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <label name="exampleFormControlInput1" class="form-label"
+          >Password</label
+        >
         <input
+          name="password"
           type="password"
           class="form-control"
-          id="exampleInputPassword1"
+          id="password"
         />
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <br />
+      <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </form>
   </div>
 </div>
