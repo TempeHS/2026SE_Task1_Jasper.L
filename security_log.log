@@ -1471,3 +1471,63 @@
 2025-12-08 01:12:11,120  * Restarting with stat
 2025-12-08 01:12:11,336  * Debugger is active!
 2025-12-08 01:12:11,336  * Debugger PIN: 137-778-855
+2025-12-08 01:18:34,631  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/userManagement.py', reloading
+2025-12-08 01:18:34,657  * Restarting with stat
+2025-12-08 01:18:34,869  * Debugger is active!
+2025-12-08 01:18:34,870  * Debugger PIN: 137-778-855
+2025-12-08 01:19:17,275  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/userManagement.py', reloading
+2025-12-08 01:19:17,302  * Restarting with stat
+2025-12-08 01:19:17,516  * Debugger is active!
+2025-12-08 01:19:17,516  * Debugger PIN: 137-778-855
+2025-12-08 01:19:29,642  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/userManagement.py', reloading
+2025-12-08 01:19:29,670  * Restarting with stat
+2025-12-08 01:19:29,879  * Debugger is active!
+2025-12-08 01:19:29,880  * Debugger PIN: 137-778-855
+2025-12-08 01:19:52,086  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/userManagement.py', reloading
+2025-12-08 01:19:52,122  * Restarting with stat
+2025-12-08 01:19:52,404  * Debugger is active!
+2025-12-08 01:19:52,404  * Debugger PIN: 137-778-855
+2025-12-08 01:20:17,644  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/userManagement.py', reloading
+2025-12-08 01:20:17,673  * Restarting with stat
+2025-12-08 01:20:17,895  * Debugger is active!
+2025-12-08 01:20:17,895  * Debugger PIN: 137-778-855
+2025-12-08 01:22:55,297  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-08 01:22:55,324  * Restarting with stat
+2025-12-08 01:22:55,537  * Debugger is active!
+2025-12-08 01:22:55,537  * Debugger PIN: 137-778-855
+2025-12-08 01:23:12,712  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-08 01:23:12,742  * Restarting with stat
+2025-12-08 01:23:12,989  * Debugger is active!
+2025-12-08 01:23:12,989  * Debugger PIN: 137-778-855
+2025-12-08 01:23:36,829 127.0.0.1 - - [08/Dec/2025 01:23:36] "GET /signup.html HTTP/1.1" 200 -
+2025-12-08 01:23:37,053 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:37,058 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:37,058 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:37,153 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:37,242 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:37,274 127.0.0.1 - - [08/Dec/2025 01:23:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-08 01:23:46,313 127.0.0.1 - - [08/Dec/2025 01:23:46] "POST /signup.html HTTP/1.1" 200 -
+2025-12-08 01:23:46,364 127.0.0.1 - - [08/Dec/2025 01:23:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:46,367 127.0.0.1 - - [08/Dec/2025 01:23:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:46,369 127.0.0.1 - - [08/Dec/2025 01:23:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:46,402 127.0.0.1 - - [08/Dec/2025 01:23:46] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:46,430 127.0.0.1 - - [08/Dec/2025 01:23:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:50,149 127.0.0.1 - - [08/Dec/2025 01:23:50] "GET /login.html HTTP/1.1" 200 -
+2025-12-08 01:23:50,201 127.0.0.1 - - [08/Dec/2025 01:23:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:50,204 127.0.0.1 - - [08/Dec/2025 01:23:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:50,207 127.0.0.1 - - [08/Dec/2025 01:23:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:50,235 127.0.0.1 - - [08/Dec/2025 01:23:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:50,263 127.0.0.1 - - [08/Dec/2025 01:23:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:58,172 127.0.0.1 - - [08/Dec/2025 01:23:58] "POST /login.html HTTP/1.1" 200 -
+2025-12-08 01:23:58,228 127.0.0.1 - - [08/Dec/2025 01:23:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:58,232 127.0.0.1 - - [08/Dec/2025 01:23:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:58,235 127.0.0.1 - - [08/Dec/2025 01:23:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:23:58,262 127.0.0.1 - - [08/Dec/2025 01:23:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:23:58,283 127.0.0.1 - - [08/Dec/2025 01:23:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:24:01,165 127.0.0.1 - - [08/Dec/2025 01:24:01] "GET /login.html HTTP/1.1" 200 -
+2025-12-08 01:24:06,913 127.0.0.1 - - [08/Dec/2025 01:24:06] "POST /login.html HTTP/1.1" 200 -
+2025-12-08 01:24:06,968 127.0.0.1 - - [08/Dec/2025 01:24:06] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:24:06,971 127.0.0.1 - - [08/Dec/2025 01:24:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:24:06,973 127.0.0.1 - - [08/Dec/2025 01:24:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:24:07,004 127.0.0.1 - - [08/Dec/2025 01:24:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:24:07,027 127.0.0.1 - - [08/Dec/2025 01:24:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -

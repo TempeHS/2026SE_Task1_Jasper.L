@@ -5,7 +5,8 @@ import bcrypt
 def newUser(email, password):
     con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
+    hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+    cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed))
     con.commit()
     con.close()
 
@@ -13,6 +14,12 @@ def newUser(email, password):
 def getUser(email, password):
     con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
+    cur.execute("SELECT password FROM users WHERE email = ?", (email,))
+    result = cur.fetchone()
+    con.close()
+    if result is None:
+        return False
+    return bcrypt.checkpw(password.encode("utf-8"), result[0])
 
 
 # def getUsers():

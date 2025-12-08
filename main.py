@@ -72,7 +72,10 @@ def login():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        return render_template("/login.html")
+        if dbHandler.getUser(email, password) is True:
+            return render_template("/loghome.html")
+        elif dbHandler.getUser(email, password) is False:
+            return render_template("/login.html")
     else:
         return render_template("/login.html")
 
