@@ -1531,3 +1531,43 @@
 2025-12-08 01:24:06,973 127.0.0.1 - - [08/Dec/2025 01:24:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-12-08 01:24:07,004 127.0.0.1 - - [08/Dec/2025 01:24:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-08 01:24:07,027 127.0.0.1 - - [08/Dec/2025 01:24:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,221 127.0.0.1 - - [08/Dec/2025 01:25:22] "POST /login.html HTTP/1.1" 200 -
+2025-12-08 01:25:22,333 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,346 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,432 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,464 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,570 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:22,599 127.0.0.1 - - [08/Dec/2025 01:25:22] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-08 01:25:24,333 127.0.0.1 - - [08/Dec/2025 01:25:24] "GET /signup.html HTTP/1.1" 200 -
+2025-12-08 01:25:24,383 127.0.0.1 - - [08/Dec/2025 01:25:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:25:24,388 127.0.0.1 - - [08/Dec/2025 01:25:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:25:24,391 127.0.0.1 - - [08/Dec/2025 01:25:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:24,422 127.0.0.1 - - [08/Dec/2025 01:25:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:25:24,445 127.0.0.1 - - [08/Dec/2025 01:25:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:33,752  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-08 01:28:33,781  * Restarting with stat
+2025-12-08 01:28:34,017  * Debugger is active!
+2025-12-08 01:28:34,017  * Debugger PIN: 137-778-855
+2025-12-08 01:28:50,194  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-08 01:28:50,223  * Restarting with stat
+2025-12-08 01:28:50,437  * Debugger is active!
+2025-12-08 01:28:50,437  * Debugger PIN: 137-778-855
+2025-12-08 01:28:53,031 127.0.0.1 - - [08/Dec/2025 01:28:53] "GET /signup.html HTTP/1.1" 200 -
+2025-12-08 01:28:53,208 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:53,217 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:28:53,225 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:28:53,320 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:53,414 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:53,445 127.0.0.1 - - [08/Dec/2025 01:28:53] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-08 01:28:54,697 127.0.0.1 - - [08/Dec/2025 01:28:54] "GET /login.html HTTP/1.1" 200 -
+2025-12-08 01:28:54,761 127.0.0.1 - - [08/Dec/2025 01:28:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:28:54,765 127.0.0.1 - - [08/Dec/2025 01:28:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:54,766 127.0.0.1 - - [08/Dec/2025 01:28:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:28:54,795 127.0.0.1 - - [08/Dec/2025 01:28:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:28:54,820 127.0.0.1 - - [08/Dec/2025 01:28:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-08 01:29:00,273 127.0.0.1 - - [08/Dec/2025 01:29:00] "POST /login.html HTTP/1.1" 200 -
+2025-12-08 01:29:00,320 127.0.0.1 - - [08/Dec/2025 01:29:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-08 01:29:00,323 127.0.0.1 - - [08/Dec/2025 01:29:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-08 01:29:00,325 127.0.0.1 - - [08/Dec/2025 01:29:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-08 01:29:00,352 127.0.0.1 - - [08/Dec/2025 01:29:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-08 01:29:00,382 127.0.0.1 - - [08/Dec/2025 01:29:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -

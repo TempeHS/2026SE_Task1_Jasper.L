@@ -72,10 +72,12 @@ def login():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        if dbHandler.getUser(email, password) is True:
+        user_valid = dbHandler.getUser(email, password)
+        if user_valid:
             return render_template("/loghome.html")
-        elif dbHandler.getUser(email, password) is False:
-            return render_template("/login.html")
+        else:
+            error = "Incorrect username or password"
+            return render_template("/login.html", error=error)
     else:
         return render_template("/login.html")
 
