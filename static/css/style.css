@@ -22,6 +22,18 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.column {
+  display: flex;
+  gap: 1rem;
+}
+
+.column a {
+  white-space: nowrap;
 }
 
 .row {
