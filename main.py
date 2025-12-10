@@ -87,8 +87,12 @@ def signup():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        dbHandler.newUser(email, password)
-        return render_template("/login.html")
+        emailsubmit = dbHandler.newUser(email, password)
+        if emailsubmit:
+            return render_template("/login.html")
+        else:
+            error = "Email is already in use"
+            return render_template("/signup.html", error=error)
     else:
         return render_template("/signup.html")
 

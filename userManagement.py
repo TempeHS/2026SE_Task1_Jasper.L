@@ -6,7 +6,13 @@ def newUser(email, password):
     con = sql.connect("databaseFiles/database.db")
     cur = con.cursor()
     hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
-    cur.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed))
+    try:
+        cur.execute(
+            "INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed)
+        )
+        return True
+    except sql.IntegrityError:
+        return False
     con.commit()
     con.close()
 
