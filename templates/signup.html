@@ -22,13 +22,15 @@
       </div>
       <div class="mb-3">
         <label name="exampleFormControlInput1" class="form-label"
-          >Password</label
+          >Password (must be at least 8 characters in length, and include at
+          least one uppercase and lowercase letter, and a number)</label
         >
         <input
           name="password"
           type="password"
           class="form-control"
           id="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         />
       </div>
       <br />
