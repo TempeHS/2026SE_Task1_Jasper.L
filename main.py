@@ -102,23 +102,23 @@ def signup():
         return render_template("/signup.html")
 
 
-@app.route("/tfa.html", methods=["POST", "GET"])
-def home():
-    user_secret = pyotp.random_base32()
-    totp = pyotp.TOTP(user_secret)
-    totp = pyotp.TOTP(user_secret)
-    otp_uri = totp.provisioning_uri(name=username, issuer_name="Devlog App")
-    qr_code = pyqrcode.create(otp_uri)
-    stream = BytesIO()
-    qr_code.png(stream, scale=5)
-    qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
-    if request.method == "POST":
-        otp_input = request.form["otp"]
-        if totp.verify(otp_input):
-            return render_template("/loghome.html")
-        else:
-            return "Invalid OTP. Please try again.", 401
-    return render_template("/tfa.html")
+# @app.route("/tfa.html", methods=["POST", "GET"])
+# def home():
+#     user_secret = pyotp.random_base32()
+#     totp = pyotp.TOTP(user_secret)
+#     totp = pyotp.TOTP(user_secret)
+#     otp_uri = totp.provisioning_uri(name=username, issuer_name="Devlog App")
+#     qr_code = pyqrcode.create(otp_uri)
+#     stream = BytesIO()
+#     qr_code.png(stream, scale=5)
+#     qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
+#     if request.method == "POST":
+#         otp_input = request.form["otp"]
+#         if totp.verify(otp_input):
+#             return render_template("/loghome.html")
+#         else:
+#             return "Invalid OTP. Please try again.", 401
+#     return render_template("/tfa.html")
 
 
 # example CSRF protected form
