@@ -5,3 +5,4 @@ flask-csp
 requests
 qrcode
 pyotp
+pyqrcode

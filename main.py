@@ -7,6 +7,8 @@ import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
+import pyotp
+import pyqrcode
 
 import userManagement as dbHandler
 
@@ -95,6 +97,19 @@ def signup():
             return render_template("/signup.html", error=error)
     else:
         return render_template("/signup.html")
+
+
+@app.route("/tfa.html", methods=["POST", "GET"])
+def tfa():
+    if request.method == "POST":
+        otp_input = request.form["otp"]
+        totp = pyotp.TOTP(request.session.get("totp_secret"))
+        if totp.verify(otp_input):
+            return render_template("/loghome.html")
+        if not totp.verify(otp_input):
+            error = "Invalid OTP. Please try again."
+            return render_template("/tfa.html", error=error)
+    return render_template("/tfa.html")
 
 
 # example CSRF protected form
