@@ -2343,3 +2343,23 @@
 2025-12-11 04:00:06,873 127.0.0.1 - - [11/Dec/2025 04:00:06] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
 2025-12-11 04:00:06,875 127.0.0.1 - - [11/Dec/2025 04:00:06] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
 2025-12-11 04:00:06,931 127.0.0.1 - - [11/Dec/2025 04:00:06] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=Sb6cUWi1jKZEY9MvhT4n HTTP/1.1" 200 -
+2025-12-11 22:02:53,593 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.49:5000
+2025-12-11 22:02:53,610 [33mPress CTRL+C to quit[0m
+2025-12-11 22:02:53,611  * Restarting with stat
+2025-12-11 22:02:53,877  * Debugger is active!
+2025-12-11 22:02:53,891  * Debugger PIN: 751-472-009
+2025-12-11 22:02:57,006 127.0.0.1 - - [11/Dec/2025 22:02:57] "GET / HTTP/1.1" 200 -
+2025-12-11 22:02:57,191 127.0.0.1 - - [11/Dec/2025 22:02:57] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:57,193 127.0.0.1 - - [11/Dec/2025 22:02:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:57,227 127.0.0.1 - - [11/Dec/2025 22:02:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:57,351 127.0.0.1 - - [11/Dec/2025 22:02:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:57,384 127.0.0.1 - - [11/Dec/2025 22:02:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:57,451 {"csp-report":{"document-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/","referrer":"https://super-duper-guacamole-9vvgqpg47gqfv9p.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 22:02:57,451 127.0.0.1 - - [11/Dec/2025 22:02:57] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 22:02:59,585 127.0.0.1 - - [11/Dec/2025 22:02:59] "[35m[1mGET /login.html HTTP/1.1[0m" 500 -
+2025-12-11 22:02:59,625 127.0.0.1 - - [11/Dec/2025 22:02:59] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-11 22:02:59,709 127.0.0.1 - - [11/Dec/2025 22:02:59] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-11 22:02:59,760 127.0.0.1 - - [11/Dec/2025 22:02:59] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=vXRSsIRja1RsshX7a8UY HTTP/1.1" 200 -

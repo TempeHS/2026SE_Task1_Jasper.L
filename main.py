@@ -10,6 +10,7 @@ from functools import wraps
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
+import tempfile
 import logging
 import pyotp
 import pyqrcode
@@ -35,11 +36,27 @@ app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 csrf = CSRFProtect(app)
 
-SESSION_TYPE = "redis"
-SESSION_REDIS = Redis(host="localhost", port=6379)
-SESSION_PERMANENT = False
-app.config.from_object(__name__)
-Session(app)
+try:
+    SESSION_REDIS = Redis(host="localhost", port=6379, socket_connect_timeout=2)
+    SESSION_REDIS.ping()
+    app.config.update(
+        SESSION_TYPE="redis",
+        SESSION_REDIS=SESSION_REDIS,
+        SESSION_PERMANENT=False,
+    )
+    Session(app)
+    app_log.info("Using Redis for session storage.")
+except Exception as e:
+    app_log.warning("Redis unavailable (%s)", e)
+    session_dir = os.path.join(tempfile.gettempdir(), "flask_session")
+    os.makedirs(session_dir, exist_ok=True)
+    app.config.update(
+        SESSION_TYPE="filesystem",
+        SESSION_FILE_DIR=session_dir,
+        SESSION_PERMANENT=False,
+    )
+    Session(app)
+    app_log.info("Using filesystem for session storage at %s", session_dir)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -104,8 +121,7 @@ def login():
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
-    else:
-        return render_template("/login.html")
+    return render_template("/login.html")
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
@@ -120,8 +136,7 @@ def signup():
         else:
             error = "Email is already in use"
             return render_template("/signup.html", error=error)
-    else:
-        return render_template("/signup.html")
+    return render_template("/signup.html")
 
 
 @app.route("/loghome.html", methods=["GET"])
