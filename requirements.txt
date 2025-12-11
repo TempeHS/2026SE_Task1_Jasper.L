@@ -6,3 +6,5 @@ requests
 qrcode
 pyotp
 pyqrcode
+Flask-Session
+Flask-Session[redis]

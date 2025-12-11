@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, url_for, session
 from flask import redirect
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask_session import Session
+from flask_session.redis import RedisSessionInterface
+from redis import Redis
+from functools import wraps
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -30,6 +34,12 @@ logging.basicConfig(
 app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
 csrf = CSRFProtect(app)
+
+SESSION_TYPE = "redis"
+SESSION_REDIS = Redis(host="localhost", port=6379)
+SESSION_PERMANENT = False
+app.config.from_object(__name__)
+Session(app)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -72,6 +82,16 @@ def privacy():
     return render_template("/privacy.html")
 
 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user_email" not in session:
+            return redirect("/login.html")
+        return f(*args, **kwargs)
+
+    return decorated_function
+
+
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
@@ -79,7 +99,8 @@ def login():
         password = request.form["password"]
         user_valid = dbHandler.getUser(email, password)
         if user_valid:
-            return render_template("/tfa.html")
+            session["user_email"] = email  # Store user email in session
+            return redirect("/loghome.html")
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
@@ -94,12 +115,19 @@ def signup():
         password = request.form["password"]
         emailsubmit = dbHandler.newUser(email, password)
         if emailsubmit:
-            return render_template("/login.html")
+            session["key"] = "value"
+            return redirect("/login.html")
         else:
             error = "Email is already in use"
             return render_template("/signup.html", error=error)
     else:
         return render_template("/signup.html")
+
+
+@app.route("/loghome.html", methods=["GET"])
+@login_required
+def loghome():
+    return render_template("/loghome.html")
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])
