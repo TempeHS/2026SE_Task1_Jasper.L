@@ -10,11 +10,11 @@ def newUser(email, password):
         cur.execute(
             "INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed)
         )
+        con.commit()
+        con.close()
         return True
     except sql.IntegrityError:
         return False
-    con.commit()
-    con.close()
 
 
 def getUser(email, password):
