@@ -24,7 +24,7 @@ from flask_jwt_extended import (
     get_jwt_identity,
 )
 
-import userManagement as dbHandler
+import DB_Handler as dbHandler
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -135,6 +135,12 @@ def signup():
 def loghome():
     user_id = get_jwt_identity()
     return render_template("/loghome.html")
+
+
+@app.route("/createlog.html", methods=["GET", "POST"])
+@jwt_required()
+def createlog():
+    return render_template("/createlog.html")
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])

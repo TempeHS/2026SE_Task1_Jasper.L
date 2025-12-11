@@ -29,6 +29,10 @@ def getUser(email, password):
     return bcrypt.checkpw(password.encode("utf-8"), result[0])
 
 
+def getLogs():
+    return "stub"
+
+
 # def getUsers():
 #     con = sql.connect("databaseFiles/database.db")
 #     cur = con.cursor()
