@@ -2450,3 +2450,76 @@
 2025-12-11 23:25:41,577 127.0.0.1 - - [11/Dec/2025 23:25:41] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
 2025-12-11 23:25:41,622 127.0.0.1 - - [11/Dec/2025 23:25:41] "GET /login.html?__debugger__=yes&cmd=resource&f=console.png&s=IwGl1KIzSRUfCcnzxRgU HTTP/1.1" 200 -
 2025-12-11 23:25:41,648 127.0.0.1 - - [11/Dec/2025 23:25:41] "[36mGET /login.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-11 23:27:09,804 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.49:5000
+2025-12-11 23:27:09,804 [33mPress CTRL+C to quit[0m
+2025-12-11 23:27:09,805  * Restarting with stat
+2025-12-11 23:27:10,061  * Debugger is active!
+2025-12-11 23:27:10,061  * Debugger PIN: 751-472-009
+2025-12-11 23:27:11,497 127.0.0.1 - - [11/Dec/2025 23:27:11] "GET / HTTP/1.1" 200 -
+2025-12-11 23:27:11,584 127.0.0.1 - - [11/Dec/2025 23:27:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:11,665 127.0.0.1 - - [11/Dec/2025 23:27:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:11,671 127.0.0.1 - - [11/Dec/2025 23:27:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:11,797 127.0.0.1 - - [11/Dec/2025 23:27:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:11,833 127.0.0.1 - - [11/Dec/2025 23:27:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:11,909 {"csp-report":{"document-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/","referrer":"https://super-duper-guacamole-9vvgqpg47gqfv9p.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 23:27:11,909 127.0.0.1 - - [11/Dec/2025 23:27:11] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 23:27:13,042 127.0.0.1 - - [11/Dec/2025 23:27:13] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 23:27:13,081 127.0.0.1 - - [11/Dec/2025 23:27:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:13,084 127.0.0.1 - - [11/Dec/2025 23:27:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:13,087 127.0.0.1 - - [11/Dec/2025 23:27:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:13,129 127.0.0.1 - - [11/Dec/2025 23:27:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:13,152 127.0.0.1 - - [11/Dec/2025 23:27:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:14,238 127.0.0.1 - - [11/Dec/2025 23:27:14] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 23:27:14,283 127.0.0.1 - - [11/Dec/2025 23:27:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:14,286 127.0.0.1 - - [11/Dec/2025 23:27:14] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:14,289 127.0.0.1 - - [11/Dec/2025 23:27:14] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:27:14,320 127.0.0.1 - - [11/Dec/2025 23:27:14] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:27:14,342 127.0.0.1 - - [11/Dec/2025 23:27:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:22,354 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.49:5000
+2025-12-11 23:36:22,354 [33mPress CTRL+C to quit[0m
+2025-12-11 23:36:22,355  * Restarting with stat
+2025-12-11 23:36:22,595  * Debugger is active!
+2025-12-11 23:36:22,595  * Debugger PIN: 751-472-009
+2025-12-11 23:36:22,954 127.0.0.1 - - [11/Dec/2025 23:36:22] "GET / HTTP/1.1" 200 -
+2025-12-11 23:36:23,176 127.0.0.1 - - [11/Dec/2025 23:36:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:23,188 127.0.0.1 - - [11/Dec/2025 23:36:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:23,189 127.0.0.1 - - [11/Dec/2025 23:36:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:23,308 127.0.0.1 - - [11/Dec/2025 23:36:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:23,411 127.0.0.1 - - [11/Dec/2025 23:36:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:23,496 {"csp-report":{"document-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/","referrer":"https://super-duper-guacamole-9vvgqpg47gqfv9p.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://super-duper-guacamole-9vvgqpg47gqfv9p-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 23:36:23,496 127.0.0.1 - - [11/Dec/2025 23:36:23] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 23:36:24,379 127.0.0.1 - - [11/Dec/2025 23:36:24] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 23:36:24,432 127.0.0.1 - - [11/Dec/2025 23:36:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:24,434 127.0.0.1 - - [11/Dec/2025 23:36:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:24,437 127.0.0.1 - - [11/Dec/2025 23:36:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:24,471 127.0.0.1 - - [11/Dec/2025 23:36:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:24,495 127.0.0.1 - - [11/Dec/2025 23:36:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:30,316 127.0.0.1 - - [11/Dec/2025 23:36:30] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 23:36:30,346 127.0.0.1 - - [11/Dec/2025 23:36:30] "GET /loghome.html HTTP/1.1" 200 -
+2025-12-11 23:36:30,396 127.0.0.1 - - [11/Dec/2025 23:36:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:30,398 127.0.0.1 - - [11/Dec/2025 23:36:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 23:36:30,401 127.0.0.1 - - [11/Dec/2025 23:36:30] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:30,436 127.0.0.1 - - [11/Dec/2025 23:36:30] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 23:36:30,467 127.0.0.1 - - [11/Dec/2025 23:36:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 23:37:20,683  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-11 23:37:20,717  * Restarting with stat
+2025-12-11 23:37:20,950  * Debugger is active!
+2025-12-11 23:37:20,951  * Debugger PIN: 751-472-009
+2025-12-11 23:38:01,748  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-11 23:38:01,793  * Restarting with stat
+2025-12-11 23:38:02,032  * Debugger is active!
+2025-12-11 23:38:02,032  * Debugger PIN: 751-472-009
+2025-12-11 23:46:52,272  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/main.py', reloading
+2025-12-11 23:46:52,303  * Restarting with stat
+2025-12-11 23:46:52,527  * Debugger is active!
+2025-12-11 23:46:52,527  * Debugger PIN: 751-472-009
+2025-12-11 23:47:44,516  * Detected change in '/workspaces/2026SE_Task1_Jasper.L/DB_Handler.py', reloading
+2025-12-11 23:47:44,542  * Restarting with stat
+2025-12-11 23:47:44,772  * Debugger is active!
+2025-12-11 23:47:44,773  * Debugger PIN: 751-472-009
