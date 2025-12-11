@@ -6,3 +6,4 @@ requests
 qrcode
 pyotp
 pyqrcode
+flask_jwt_extended

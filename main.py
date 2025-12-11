@@ -1,8 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-from flask import redirect
-from flask import render_template
-from flask import request
-from flask import jsonify
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    session,
+    jsonify,
+    make_response,
+)
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -12,6 +17,12 @@ import pyqrcode
 import os
 import base64
 from io import BytesIO
+from flask_jwt_extended import (
+    JWTManager,
+    create_access_token,
+    jwt_required,
+    get_jwt_identity,
+)
 
 import userManagement as dbHandler
 
@@ -29,7 +40,13 @@ logging.basicConfig(
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
+app.config["JWT_SECRET_KEY"] = app.secret_key
+app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
+app.config["JWT_COOKIE_SECURE"] = True
+app.config["JWT_COOKIE_CSRF_PROTECT"] = False
+app.config["JWT_COOKIE_SAMESITE"] = "Lax"
 csrf = CSRFProtect(app)
+jwt = JWTManager(app)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -79,12 +96,23 @@ def login():
         password = request.form["password"]
         user_valid = dbHandler.getUser(email, password)
         if user_valid:
-            return render_template("/tfa.html")
+            access_token = create_access_token(
+                identity=str(email), additional_claims={"email": email}
+            )
+            response = make_response(redirect("/loghome.html"))
+            response.set_cookie(
+                "access_token_cookie",
+                access_token,
+                httponly=True,
+                secure=True,
+                samesite="Lax",
+                max_age=3600,
+            )
+            return response
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
-    else:
-        return render_template("/login.html")
+    return render_template("/login.html")
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
@@ -94,12 +122,19 @@ def signup():
         password = request.form["password"]
         emailsubmit = dbHandler.newUser(email, password)
         if emailsubmit:
-            return render_template("/login.html")
+            return redirect("/login.html")
         else:
             error = "Email is already in use"
             return render_template("/signup.html", error=error)
-    else:
-        return render_template("/signup.html")
+
+    return render_template("/signup.html")
+
+
+@app.route("/loghome.html", methods=["GET"])
+@jwt_required()
+def loghome():
+    user_id = get_jwt_identity()
+    return render_template("/loghome.html")
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])
