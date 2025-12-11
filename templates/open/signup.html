@@ -15,30 +15,26 @@
   <div class="row">
     <form action="/signup.html" method="POST" class="box">
       <div class="mb-3">
-        <label name="exampleFormControlInput1" class="form-label"
-          >Email address</label
-        >
+        <label for="email" class="form-label">Email address</label>
         <input
           name="email"
           type="email"
           class="form-control"
           id="email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
           placeholder="name@example.com"
           required
         />
       </div>
       <div class="mb-3">
-        <label name="exampleFormControlInput1" class="form-label"
-          >Password (must be at least 8 characters in length, and include at
-          least one uppercase and lowercase letter, and a number)</label
-        >
+        <label for="password" class="form-label"> Password </label>
         <input
           name="password"
           type="password"
           class="form-control"
           id="password"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="At least 8 chars, include upper and lower case letters and a number"
           required
         />
       </div>
