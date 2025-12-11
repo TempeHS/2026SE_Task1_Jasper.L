@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask import redirect
 from flask import render_template
 from flask import request
@@ -9,6 +9,9 @@ from flask_csp.csp import csp_header
 import logging
 import pyotp
 import pyqrcode
+import os
+import base64
+from io import BytesIO
 
 import userManagement as dbHandler
 
@@ -76,7 +79,7 @@ def login():
         password = request.form["password"]
         user_valid = dbHandler.getUser(email, password)
         if user_valid:
-            return render_template("/loghome.html")
+            return render_template("/tfa.html")
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
@@ -100,15 +103,21 @@ def signup():
 
 
 @app.route("/tfa.html", methods=["POST", "GET"])
-def tfa():
+def home():
+    user_secret = pyotp.random_base32()
+    totp = pyotp.TOTP(user_secret)
+    totp = pyotp.TOTP(user_secret)
+    otp_uri = totp.provisioning_uri(name=username, issuer_name="Devlog App")
+    qr_code = pyqrcode.create(otp_uri)
+    stream = BytesIO()
+    qr_code.png(stream, scale=5)
+    qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
     if request.method == "POST":
         otp_input = request.form["otp"]
-        totp = pyotp.TOTP(request.session.get("totp_secret"))
         if totp.verify(otp_input):
             return render_template("/loghome.html")
-        if not totp.verify(otp_input):
-            error = "Invalid OTP. Please try again."
-            return render_template("/tfa.html", error=error)
+        else:
+            return "Invalid OTP. Please try again.", 401
     return render_template("/tfa.html")
 
 

@@ -14,6 +14,7 @@ def newUser(email, password):
         con.close()
         return True
     except sql.IntegrityError:
+        con.close()
         return False
 
 
