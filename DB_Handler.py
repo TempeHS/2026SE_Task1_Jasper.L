@@ -30,6 +30,7 @@ def getUser(email, password):
     return bcrypt.checkpw(password.encode("utf-8"), result[0])
 
 
+<<<<<<< HEAD
 def get_db():
     if "db" not in g:
         db_path = current_app.config.get["DATABASE"]
@@ -49,6 +50,10 @@ def getLogs():
     cur = db.execute("SELECT * FROM logs ORDER BY created DESC")
     rows = cur.fetchall()
     return [dict(r) for r in rows]
+=======
+def getLogs():
+    return "stub"
+>>>>>>> 90ae531 (wip: starting on log viewer and creation)
 
 
 # def getUsers():

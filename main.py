@@ -158,6 +158,12 @@ def createlog():
     return render_template("/createlog.html")
 
 
+@app.route("/createlog.html", methods=["GET", "POST"])
+@jwt_required()
+def createlog():
+    return render_template("/createlog.html")
+
+
 # @app.route("/tfa.html", methods=["POST", "GET"])
 # def home():
 #     user_secret = pyotp.random_base32()
