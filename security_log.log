@@ -2412,6 +2412,7 @@
 2025-12-11 23:14:43,764 127.0.0.1 - - [11/Dec/2025 23:14:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-11 23:14:43,789 127.0.0.1 - - [11/Dec/2025 23:14:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-12-11 23:14:43,816 127.0.0.1 - - [11/Dec/2025 23:14:43] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+<<<<<<< HEAD
 2025-12-11 23:24:50,586 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
@@ -2745,3 +2746,5 @@
 2025-12-12 00:52:55,666 127.0.0.1 - - [12/Dec/2025 00:52:55] "[36mGET /loghome.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
 2025-12-12 00:52:55,669 127.0.0.1 - - [12/Dec/2025 00:52:55] "[36mGET /loghome.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
 2025-12-12 00:52:55,712 127.0.0.1 - - [12/Dec/2025 00:52:55] "GET /loghome.html?__debugger__=yes&cmd=resource&f=console.png&s=7k5bTq4TJiEA2ZnZPnq2 HTTP/1.1" 200 -
+=======
+>>>>>>> bac2612 (update: edited signup page to be cleaner + added folders for organisation)
