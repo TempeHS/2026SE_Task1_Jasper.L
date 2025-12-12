@@ -1,5 +1,6 @@
 import sqlite3 as sql
 import bcrypt
+from flask import g, current_app
 
 
 def newUser(email, password):
@@ -29,8 +30,25 @@ def getUser(email, password):
     return bcrypt.checkpw(password.encode("utf-8"), result[0])
 
 
+def get_db():
+    if "db" not in g:
+        db_path = current_app.config.get["DATABASE"]
+        g.db = sql.connect(db_path)
+        g.db.row_factory = sql.Row
+    return g.db
+
+
+def close_db(e=None):
+    db = g.pop("db", None)
+    if db is not None:
+        db.close()
+
+
 def getLogs():
-    return "stub"
+    db = get_db()
+    cur = db.execute("SELECT * FROM logs ORDER BY created DESC")
+    rows = cur.fetchall()
+    return [dict(r) for r in rows]
 
 
 # def getUsers():
