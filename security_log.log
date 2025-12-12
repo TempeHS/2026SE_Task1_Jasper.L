@@ -2821,3 +2821,81 @@
 2025-12-11 23:47:44,542  * Restarting with stat
 2025-12-11 23:47:44,772  * Debugger is active!
 2025-12-11 23:47:44,773  * Debugger PIN: 751-472-009
+2025-12-12 02:45:02,169 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.236:5000
+2025-12-12 02:45:02,170 [33mPress CTRL+C to quit[0m
+2025-12-12 02:45:02,170  * Restarting with stat
+2025-12-12 02:45:02,521  * Debugger is active!
+2025-12-12 02:45:02,522  * Debugger PIN: 134-677-249
+2025-12-12 02:45:06,403 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET / HTTP/1.1" 200 -
+2025-12-12 02:45:06,627 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-12 02:45:06,628 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-12 02:45:06,628 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-12-12 02:45:06,800 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-12-12 02:45:06,897 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-12-12 02:45:06,942 127.0.0.1 - - [12/Dec/2025 02:45:06] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:06,943 127.0.0.1 - - [12/Dec/2025 02:45:06] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-12-12 02:45:06,991 {"csp-report":{"document-uri":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9-5000.app.github.dev/","referrer":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-12 02:45:06,992 127.0.0.1 - - [12/Dec/2025 02:45:06] "POST /csp_report HTTP/1.1" 200 -
+2025-12-12 02:45:07,042 127.0.0.1 - - [12/Dec/2025 02:45:07] "GET / HTTP/1.1" 200 -
+2025-12-12 02:45:07,051 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/css/style.css HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,053 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/js/app.js HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,054 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/css/style.css/bootstrap.min.css HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,056 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,064 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/icon-128x128.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,069 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/images/logo.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,069 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/icon-384x384.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,073 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/images/favicon.jpg HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,074 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/mobile_screenshot.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,080 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/icon-512x512.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,081 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/icon-192x192.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:07,085 127.0.0.1 - - [12/Dec/2025 02:45:07] "[33mGET /static/js/static/icons/desktop_screenshot.png HTTP/1.1[0m" 404 -
+2025-12-12 02:45:08,174 127.0.0.1 - - [12/Dec/2025 02:45:08] "GET /login.html HTTP/1.1" 200 -
+2025-12-12 02:45:08,356 127.0.0.1 - - [12/Dec/2025 02:45:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:45:08,366 127.0.0.1 - - [12/Dec/2025 02:45:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:08,369 127.0.0.1 - - [12/Dec/2025 02:45:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:45:08,481 127.0.0.1 - - [12/Dec/2025 02:45:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:08,567 127.0.0.1 - - [12/Dec/2025 02:45:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:13,022 127.0.0.1 - - [12/Dec/2025 02:45:13] "POST /login.html HTTP/1.1" 200 -
+2025-12-12 02:45:13,064 127.0.0.1 - - [12/Dec/2025 02:45:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:45:13,067 127.0.0.1 - - [12/Dec/2025 02:45:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:45:13,068 127.0.0.1 - - [12/Dec/2025 02:45:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:13,136 127.0.0.1 - - [12/Dec/2025 02:45:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:45:13,158 127.0.0.1 - - [12/Dec/2025 02:45:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:34,952 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.236:5000
+2025-12-12 02:46:34,953 [33mPress CTRL+C to quit[0m
+2025-12-12 02:46:34,954  * Restarting with stat
+2025-12-12 02:46:35,181  * Debugger is active!
+2025-12-12 02:46:35,182  * Debugger PIN: 134-677-249
+2025-12-12 02:46:43,509 127.0.0.1 - - [12/Dec/2025 02:46:43] "GET / HTTP/1.1" 200 -
+2025-12-12 02:46:43,599 127.0.0.1 - - [12/Dec/2025 02:46:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:43,600 127.0.0.1 - - [12/Dec/2025 02:46:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:43,600 127.0.0.1 - - [12/Dec/2025 02:46:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:43,648 127.0.0.1 - - [12/Dec/2025 02:46:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:43,672 127.0.0.1 - - [12/Dec/2025 02:46:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:43,744 {"csp-report":{"document-uri":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9-5000.app.github.dev/","referrer":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://vigilant-space-giggle-7qqjrgj4vpq3rqg9-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-12 02:46:43,744 127.0.0.1 - - [12/Dec/2025 02:46:43] "POST /csp_report HTTP/1.1" 200 -
+2025-12-12 02:46:47,143 127.0.0.1 - - [12/Dec/2025 02:46:47] "GET /login.html HTTP/1.1" 200 -
+2025-12-12 02:46:47,188 127.0.0.1 - - [12/Dec/2025 02:46:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:47,191 127.0.0.1 - - [12/Dec/2025 02:46:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:47,193 127.0.0.1 - - [12/Dec/2025 02:46:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:47,226 127.0.0.1 - - [12/Dec/2025 02:46:47] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:47,250 127.0.0.1 - - [12/Dec/2025 02:46:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:48,297 127.0.0.1 - - [12/Dec/2025 02:46:48] "GET /signup.html HTTP/1.1" 200 -
+2025-12-12 02:46:48,342 127.0.0.1 - - [12/Dec/2025 02:46:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:48,344 127.0.0.1 - - [12/Dec/2025 02:46:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:48,347 127.0.0.1 - - [12/Dec/2025 02:46:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:48,377 127.0.0.1 - - [12/Dec/2025 02:46:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:48,408 127.0.0.1 - - [12/Dec/2025 02:46:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:53,737 127.0.0.1 - - [12/Dec/2025 02:46:53] "[32mPOST /signup.html HTTP/1.1[0m" 302 -
+2025-12-12 02:46:53,762 127.0.0.1 - - [12/Dec/2025 02:46:53] "GET /login.html HTTP/1.1" 200 -
+2025-12-12 02:46:53,809 127.0.0.1 - - [12/Dec/2025 02:46:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:53,815 127.0.0.1 - - [12/Dec/2025 02:46:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:53,820 127.0.0.1 - - [12/Dec/2025 02:46:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-12 02:46:53,852 127.0.0.1 - - [12/Dec/2025 02:46:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-12 02:46:53,877 127.0.0.1 - - [12/Dec/2025 02:46:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
