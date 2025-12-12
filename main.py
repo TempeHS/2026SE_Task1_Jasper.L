@@ -1,12 +1,13 @@
-from flask import Flask, url_for, session
-from flask import redirect
-from flask import render_template
-from flask import request
-from flask import jsonify
-from flask_session import Session
-from flask_session.redis import RedisSessionInterface
-from redis import Redis
-from functools import wraps
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    session,
+    jsonify,
+    make_response,
+)
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -17,8 +18,14 @@ import pyqrcode
 import os
 import base64
 from io import BytesIO
+from flask_jwt_extended import (
+    JWTManager,
+    create_access_token,
+    jwt_required,
+    get_jwt_identity,
+)
 
-import userManagement as dbHandler
+import DB_Handler as dbHandler
 
 # Code snippet for logging a message
 # app.logger.critical("message")
@@ -34,29 +41,16 @@ logging.basicConfig(
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
+app.config["JWT_SECRET_KEY"] = app.secret_key
+app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
+app.config["JWT_COOKIE_SECURE"] = True
+app.config["JWT_COOKIE_CSRF_PROTECT"] = False
+app.config["JWT_COOKIE_SAMESITE"] = "Lax"
+app.config["DATABASE"] = "databaseFiles/database.db"
 csrf = CSRFProtect(app)
+jwt = JWTManager(app)
 
-try:
-    SESSION_REDIS = Redis(host="localhost", port=6379, socket_connect_timeout=2)
-    SESSION_REDIS.ping()
-    app.config.update(
-        SESSION_TYPE="redis",
-        SESSION_REDIS=SESSION_REDIS,
-        SESSION_PERMANENT=False,
-    )
-    Session(app)
-    app_log.info("Using Redis for session storage.")
-except Exception as e:
-    app_log.warning("Redis unavailable (%s)", e)
-    session_dir = os.path.join(tempfile.gettempdir(), "flask_session")
-    os.makedirs(session_dir, exist_ok=True)
-    app.config.update(
-        SESSION_TYPE="filesystem",
-        SESSION_FILE_DIR=session_dir,
-        SESSION_PERMANENT=False,
-    )
-    Session(app)
-    app_log.info("Using filesystem for session storage at %s", session_dir)
+app.teardown_appcontext(dbHandler.close_db)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -99,16 +93,6 @@ def privacy():
     return render_template("/privacy.html")
 
 
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if "user_email" not in session:
-            return redirect("/login.html")
-        return f(*args, **kwargs)
-
-    return decorated_function
-
-
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
@@ -116,8 +100,19 @@ def login():
         password = request.form["password"]
         user_valid = dbHandler.getUser(email, password)
         if user_valid:
-            session["user_email"] = email  # Store user email in session
-            return redirect("/loghome.html")
+            access_token = create_access_token(
+                identity=str(email), additional_claims={"email": email}
+            )
+            response = make_response(redirect("/loghome.html"))
+            response.set_cookie(
+                "access_token_cookie",
+                access_token,
+                httponly=True,
+                secure=True,
+                samesite="Lax",
+                max_age=3600,
+            )
+            return response
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
@@ -131,18 +126,26 @@ def signup():
         password = request.form["password"]
         emailsubmit = dbHandler.newUser(email, password)
         if emailsubmit:
-            session["key"] = "value"
             return redirect("/login.html")
         else:
             error = "Email is already in use"
             return render_template("/signup.html", error=error)
+
     return render_template("/signup.html")
 
 
 @app.route("/loghome.html", methods=["GET"])
-@login_required
+@jwt_required()
 def loghome():
-    return render_template("/loghome.html")
+    user_id = get_jwt_identity()
+    entries = dbHandler.getLogs()
+    return render_template("/loghome.html", entries=entries)
+
+
+@app.route("/createlog.html", methods=["GET", "POST"])
+@jwt_required()
+def createlog():
+    return render_template("/createlog.html")
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])

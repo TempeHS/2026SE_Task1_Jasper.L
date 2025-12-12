@@ -6,5 +6,4 @@ requests
 qrcode
 pyotp
 pyqrcode
-Flask-Session
-Flask-Session[redis]
+flask_jwt_extended
