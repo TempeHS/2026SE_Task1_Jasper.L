@@ -46,8 +46,11 @@ app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
 app.config["JWT_COOKIE_SECURE"] = True
 app.config["JWT_COOKIE_CSRF_PROTECT"] = False
 app.config["JWT_COOKIE_SAMESITE"] = "Lax"
+app.config["DATABASE"] = "databaseFiles/database.db"
 csrf = CSRFProtect(app)
 jwt = JWTManager(app)
+
+app.teardown_appcontext(dbHandler.close_db)
 
 
 # Redirect index.html to domain root for consistent UX
@@ -145,7 +148,8 @@ def signup():
 @jwt_required()
 def loghome():
     user_id = get_jwt_identity()
-    return render_template("/loghome.html")
+    entries = dbHandler.getLogs()
+    return render_template("/loghome.html", entries=entries)
 
 
 @app.route("/createlog.html", methods=["GET", "POST"])
