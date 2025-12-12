@@ -32,7 +32,7 @@ def getUser(email, password):
 
 def get_db():
     if "db" not in g:
-        db_path = current_app.config.get["DATABASE"]
+        db_path = current_app.config.get("DATABASE")
         g.db = sql.connect(db_path)
         g.db.row_factory = sql.Row
     return g.db
