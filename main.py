@@ -93,16 +93,6 @@ def privacy():
     return render_template("/privacy.html")
 
 
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if "user_email" not in session:
-            return redirect("/login.html")
-        return f(*args, **kwargs)
-
-    return decorated_function
-
-
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
@@ -150,12 +140,6 @@ def loghome():
     user_id = get_jwt_identity()
     entries = dbHandler.getLogs()
     return render_template("/loghome.html", entries=entries)
-
-
-@app.route("/createlog.html", methods=["GET", "POST"])
-@jwt_required()
-def createlog():
-    return render_template("/createlog.html")
 
 
 @app.route("/createlog.html", methods=["GET", "POST"])
