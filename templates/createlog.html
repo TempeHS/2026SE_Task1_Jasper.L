@@ -4,6 +4,13 @@
     <h1>Submit a Log</h1>
   </div>
 </div>
+{% if error %}
+<div class="container">
+  <div class="row">
+    <div class="alert alert-danger" role="alert">something messed up, check your inputs</div>
+  </div>
+</div>
+{% endif %}
 <div class="container">
   <div class="row">
     <form action="/createlog.html" method="POST" class="box">

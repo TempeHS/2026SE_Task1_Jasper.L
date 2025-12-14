@@ -23,6 +23,7 @@ from flask_jwt_extended import (
     create_access_token,
     jwt_required,
     get_jwt_identity,
+    get_jwt,
 )
 
 import DB_Handler as dbHandler
@@ -100,8 +101,10 @@ def login():
         password = request.form["password"]
         user_valid = dbHandler.getUser(email, password)
         if user_valid:
+            user_name = user_valid.get("name")
             access_token = create_access_token(
-                identity=str(email), additional_claims={"email": email}
+                identity=str(email),
+                additional_claims={"email": email, "name": user_name},
             )
             response = make_response(redirect("/loghome.html"))
             response.set_cookie(
@@ -124,7 +127,8 @@ def signup():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        emailsubmit = dbHandler.newUser(email, password)
+        name = request.form["name"]
+        emailsubmit = dbHandler.newUser(name, email, password)
         if emailsubmit:
             return redirect("/login.html")
         else:
@@ -150,12 +154,13 @@ def createlog():
         project = request.form["project"]
         worktime = request.form["worktime"]
         message = request.form["message"]
-        author = get_jwt_identity()
+        claims = get_jwt()
+        author = claims.get("name")
         createlog = dbHandler.createLog(project, author, message, worktime)
         if createlog:
             return redirect("loghome.html")
         else:
-            return render_template("/signup.html", error=True)
+            return render_template("/createlog.html", error=True)
     return render_template("/createlog.html")
 
 
