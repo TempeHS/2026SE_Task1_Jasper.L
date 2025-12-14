@@ -145,6 +145,17 @@ def loghome():
 @app.route("/createlog.html", methods=["GET", "POST"])
 @jwt_required()
 def createlog():
+    user_id = get_jwt_identity()
+    if request.method == "POST":
+        project = request.form["project"]
+        worktime = request.form["worktime"]
+        message = request.form["message"]
+        author = get_jwt_identity()
+        createlog = dbHandler.createLog(project, author, message, worktime)
+        if createlog:
+            return redirect("loghome.html")
+        else:
+            return render_template("/signup.html", error=True)
     return render_template("/createlog.html")
 
 

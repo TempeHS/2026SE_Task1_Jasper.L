@@ -3,13 +3,14 @@ import bcrypt
 from flask import g, current_app
 
 
-def newUser(email, password):
-    con = sql.connect("databaseFiles/database.db")
+def newUser(name, email, password):
+    con = get_db()
     cur = con.cursor()
     hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
     try:
         cur.execute(
-            "INSERT INTO users (email, password) VALUES (?, ?)", (email, hashed)
+            "INSERT INTO users (email, password, name) VALUES (?, ?, ?)",
+            (email, hashed, name),
         )
         con.commit()
         con.close()
@@ -20,7 +21,7 @@ def newUser(email, password):
 
 
 def getUser(email, password):
-    con = sql.connect("databaseFiles/database.db")
+    con = get_db()
     cur = con.cursor()
     cur.execute("SELECT password FROM users WHERE email = ?", (email,))
     result = cur.fetchone()
@@ -45,10 +46,26 @@ def close_db(e=None):
 
 
 def getLogs():
-    db = get_db()
-    cur = db.execute("SELECT * FROM logs ORDER BY created DESC")
+    con = get_db()
+    cur = con.execute("SELECT * FROM logs ORDER BY created DESC")
     rows = cur.fetchall()
     return [dict(r) for r in rows]
+
+
+def createLog(project, author, message, worktime):
+    con = get_db()
+    cur = con.cursor()
+    try:
+        cur.execute(
+            "INSERT INTO logs (author, message, worktime, project) VALUES (?, ?, ?, ?)",
+            (author, message, worktime, project),
+        )
+        con.commit()
+        con.close()
+        return True
+    except sql.IntegrityError:
+        con.close()
+        return False
 
 
 # def getUsers():

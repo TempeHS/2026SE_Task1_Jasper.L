@@ -5,22 +5,28 @@
   </div>
 </div>
 <div class="container">
-  <div class="columns">
+  <div class="row">
     {% for entry in entries %}
-    <div class="column">
+    <div class="col-md-6 mb-3">
       <div class="card" style="width: 18rem">
         <div class="card-body">
-          <h5 class="card-title">{{ entry.author }}</h5>
+          <h4 class="card-title"><b>Project:</b> {{ entry.project }}</h4>
+          <h5 class="card-title"><b>Author:</b> {{ entry.author }}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">
             {{ entry.created }}
+          </h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            Time worked: {{ entry.worktime }} hrs
           </h6>
           <p class="card-text">{{ entry.message }}</p>
         </div>
       </div>
     </div>
     {% else %}
-    <br />
-    <h5>No entries yet.</h4>
+    <div class="col-12">
+      <br />
+      <h5>No entries yet.</h5>
+    </div>
     {% endfor %}
   </div>
 </div>
