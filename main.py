@@ -99,12 +99,11 @@ def login():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        user_valid = dbHandler.getUser(email, password)
-        if user_valid:
-            user_name = user_valid.get("name")
+        user_data = dbHandler.getUser(email, password)
+        if user_data:
             access_token = create_access_token(
                 identity=str(email),
-                additional_claims={"email": email, "name": user_name},
+                additional_claims={"email": email, "name": user_data["name"]},
             )
             response = make_response(redirect("/loghome.html"))
             response.set_cookie(

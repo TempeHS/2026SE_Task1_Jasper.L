@@ -23,12 +23,15 @@ def newUser(name, email, password):
 def getUser(email, password):
     con = get_db()
     cur = con.cursor()
-    cur.execute("SELECT password FROM users WHERE email = ?", (email,))
+    cur.execute("SELECT id, name, email, password FROM users WHERE email = ?", (email,))
     result = cur.fetchone()
     con.close()
     if result is None:
-        return False
-    return bcrypt.checkpw(password.encode("utf-8"), result[0])
+        return None
+    # Check password with bcrypt
+    if bcrypt.checkpw(password.encode("utf-8"), result[3]):
+        return {"id": result[0], "name": result[1], "email": result[2]}
+    return None
 
 
 def get_db():
