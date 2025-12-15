@@ -163,6 +163,19 @@ def createlog():
     return render_template("/createlog.html")
 
 
+@app.route("/logout.html", methods=["GET"])
+def logoutpage():
+    return render_template("/logout.html")
+
+
+@app.route("/logout", methods=["GET"])
+def logout():
+    response = make_response(redirect("/"))
+    response.delete_cookie("access_token_cookie")
+    app_log.info("User logged out")
+    return response
+
+
 # @app.route("/tfa.html", methods=["POST", "GET"])
 # def home():
 #     user_secret = pyotp.random_base32()
