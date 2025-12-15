@@ -67,21 +67,21 @@ def root():
 
 @jwt.expired_token_loader
 def expired_token_callback(jwt_header, jwt_payload):
-    response = make_response(redirect("/login.html"))
+    response = make_response(redirect("/login.html?error=Please log in again"))
     response.delete_cookie("access_token_cookie")
     return response
 
 
 @jwt.invalid_token_loader
 def invalid_token_callback(error):
-    response = make_response(redirect("/login.html"))
+    response = make_response(redirect("/login.html?error=Please log in again"))
     response.delete_cookie("access_token_cookie")
     return response
 
 
 @jwt.unauthorized_loader
 def unauthorized_callback(error):
-    return redirect("/login.html")
+    return redirect("/login.html?error=Please log in")
 
 
 @app.route("/", methods=["POST", "GET"])
@@ -138,7 +138,8 @@ def login():
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
-    return render_template("/login.html")
+    error = request.args.get("error")
+    return render_template("/login.html", error=error)
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
