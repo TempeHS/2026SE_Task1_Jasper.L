@@ -185,6 +185,22 @@ def logout():
     return response
 
 
+@app.route("/log/<int:log_id>")
+@jwt_required()
+def view_log(log_id):
+    entry = dbHandler.getLog(log_id)
+    if entry:
+        if isinstance(entry["created"], str):
+            entry["created"] = datetime.strptime(entry["created"], "%Y-%m-%d %H:%M:%S")
+        if isinstance(entry["starttime"], str):
+            entry["starttime"] = datetime.strptime(entry["starttime"], "%Y-%m-%dT%H:%M")
+        if isinstance(entry["endtime"], str):
+            entry["endtime"] = datetime.strptime(entry["endtime"], "%Y-%m-%dT%H:%M")
+        return render_template("logdetail.html", entry=entry)
+    else:
+        return "Log not found", 404
+
+
 # @app.route("/tfa.html", methods=["POST", "GET"])
 # def home():
 #     user_secret = pyotp.random_base32()

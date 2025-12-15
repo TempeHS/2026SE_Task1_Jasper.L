@@ -1,0 +1,27 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <a href="/loghome.html" class="btn btn-secondary mb-3">← Back to Logs</a>
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title"><b>{{ entry.project }}</b></h2>
+          <h4 class="card-title"><b>{{ entry.author }}</b></h4>
+          <h5 class="card-subtitle mb-3 text-body-secondary">
+            {{ entry.created.strftime('%d of %B %Y at %H:%M') }}
+          </h5>
+          <h6 class="card-subtitle mb-3 text-body-secondary">
+            Time worked: {{ entry.worktime }} hrs <br />{{
+            entry.starttime.strftime('%d of %B %Y at %H:%M') }} to {{
+            entry.endtime.strftime('%d of %B %Y at %H:%M') }}
+          </h6>
+          <hr />
+          <p class="card-text" style="white-space: pre-wrap">
+            {{ entry.message }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

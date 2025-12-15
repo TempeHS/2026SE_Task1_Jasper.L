@@ -85,6 +85,16 @@ def createLog(project, author, starttime, endtime, message):
         return False
 
 
+def getLog(log_id):
+    con = get_db()
+    cur = con.cursor()
+    cur.execute("SELECT * FROM logs WHERE id = ?", (log_id,))
+    row = cur.fetchone()
+    if row:
+        return dict(row)
+    return None
+
+
 # def getUsers():
 #     con = sql.connect("databaseFiles/database.db")
 #     cur = con.cursor()
