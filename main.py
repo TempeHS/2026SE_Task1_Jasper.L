@@ -173,11 +173,13 @@ def createlog():
 
 
 @app.route("/logout.html", methods=["GET"])
+@jwt_required()
 def logoutpage():
     return render_template("/logout.html")
 
 
 @app.route("/logout", methods=["GET"])
+@jwt_required()
 def logout():
     response = make_response(redirect("/"))
     response.delete_cookie("access_token_cookie")
@@ -199,6 +201,24 @@ def view_log(log_id):
         return render_template("logdetail.html", entry=entry)
     else:
         return "Log not found", 404
+
+
+@app.route("/logdetail/<int:log_id>", methods=["GET", "POST"])
+@jwt_required()
+def editlog(log_id):
+    user_id = get_jwt_identity()
+    if request.method == "POST":
+        id = log_id
+        project = request.form["project"]
+        starttime = request.form["date_started"]
+        endtime = request.form["date_finished"]
+        message = request.form["message"]
+        editlog = dbHandler.editLog(id, project, starttime, endtime, message)
+        if editlog:
+            return redirect("loghome.html")
+        else:
+            return render_template("/editlog.html", error=True)
+    return render_template("/editlog.html")
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])

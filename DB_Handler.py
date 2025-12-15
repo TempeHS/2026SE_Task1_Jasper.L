@@ -85,6 +85,35 @@ def createLog(project, author, starttime, endtime, message):
         return False
 
 
+def editLog(id, project, starttime, endtime, message):
+    con = get_db()
+    cur = con.cursor()
+    try:
+        if isinstance(starttime, str):
+            start = datetime.fromisoformat(starttime)
+        else:
+            start = starttime
+        if isinstance(endtime, str):
+            end = datetime.fromisoformat(endtime)
+        else:
+            end = endtime
+        time_diff = (end - start).total_seconds() / 3600
+        if time_diff < 0:
+            con.close()
+            return False
+        worktime = round(time_diff * 4) / 4
+        cur.execute(
+            "UPDATE logs SET project = ?, message = ?, worktime = ?, starttime = ?, endtime = ? WHERE id = ?",
+            (project, message, worktime, starttime, endtime, id),
+        )
+        con.commit()
+        con.close()
+        return True
+    except sql.IntegrityError:
+        con.close()
+        return False
+
+
 def getLog(log_id):
     con = get_db()
     cur = con.cursor()
