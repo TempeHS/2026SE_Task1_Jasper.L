@@ -61,9 +61,20 @@ def createLog(project, author, starttime, endtime, message):
     con = get_db()
     cur = con.cursor()
     try:
-        worktime = hrs
+        if isinstance(starttime, str):
+            start = datetime.fromisoformat(starttime)
+        else:
+            start = starttime
+        if isinstance(endtime, str):
+            end = datetime.fromisoformat(endtime)
+        else:
+            end = endtime
+        time_diff = (end - start).total_seconds() / 3600
+        if time_diff < 0:
+            return False
+        worktime = round(time_diff * 4) / 4
         cur.execute(
-            "INSERT INTO logs (author, message, worktime, starttime, endtime, project) VALUES (?, ?, ?, ?)",
+            "INSERT INTO logs (author, message, worktime, starttime, endtime, project) VALUES (?, ?, ?, ?, ?, ?)",
             (author, message, worktime, starttime, endtime, project),
         )
         con.commit()

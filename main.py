@@ -25,6 +25,7 @@ from flask_jwt_extended import (
     get_jwt_identity,
     get_jwt,
 )
+from datetime import datetime
 
 import DB_Handler as dbHandler
 
@@ -142,6 +143,13 @@ def signup():
 def loghome():
     user_id = get_jwt_identity()
     entries = dbHandler.getLogs()
+    for entry in entries:
+        if isinstance(entry["created"], str):
+            entry["created"] = datetime.strptime(entry["created"], "%Y-%m-%d %H:%M:%S")
+        if isinstance(entry["starttime"], str):
+            entry["starttime"] = datetime.strptime(entry["starttime"], "%Y-%m-%dT%H:%M")
+        if isinstance(entry["endtime"], str):
+            entry["endtime"] = datetime.strptime(entry["endtime"], "%Y-%m-%dT%H:%M")
     return render_template("/loghome.html", entries=entries)
 
 

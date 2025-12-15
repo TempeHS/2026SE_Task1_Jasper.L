@@ -18,10 +18,12 @@
           <h4 class="card-title"><b>Project:</b> {{ entry.project }}</h4>
           <h5 class="card-title"><b>Author:</b> {{ entry.author }}</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">
-            {{ entry.created }}
+            {{ entry.created.strftime('%d of %B %Y at %H:%M') }}
           </h6>
           <h6 class="card-subtitle mb-2 text-body-secondary">
-            Time worked: {{ entry.worktime }} hrs
+            Time worked: {{ entry.worktime }} hrs ({{
+            entry.starttime.strftime('%H:%M') }} to {{
+            entry.endtime.strftime('%H:%M') }})
           </h6>
           <p class="card-text">{{ entry.message }}</p>
         </div>
