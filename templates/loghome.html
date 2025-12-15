@@ -1,14 +1,10 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
   <div class="column">
-    <h2>Welcome to the Devlogs home</h2>
+    <h1>Welcome to the Devlogs home</h1>
   </div>
 </div>
-<div class="container">
-  <div class="column">
-    <h1><a class="btn btn-primary" href="/createlog.html">Create Log</a></h1>
-  </div>
-</div>
+<br />
 <div class="container">
   <div class="row">
     {% for entry in entries %}

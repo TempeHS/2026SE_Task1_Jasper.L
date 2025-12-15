@@ -65,6 +65,25 @@ def root():
     return redirect("/", 302)
 
 
+@jwt.expired_token_loader
+def expired_token_callback(jwt_header, jwt_payload):
+    response = make_response(redirect("/login.html"))
+    response.delete_cookie("access_token_cookie")
+    return response
+
+
+@jwt.invalid_token_loader
+def invalid_token_callback(error):
+    response = make_response(redirect("/login.html"))
+    response.delete_cookie("access_token_cookie")
+    return response
+
+
+@jwt.unauthorized_loader
+def unauthorized_callback(error):
+    return redirect("/login.html")
+
+
 @app.route("/", methods=["POST", "GET"])
 @csp_header(
     {
