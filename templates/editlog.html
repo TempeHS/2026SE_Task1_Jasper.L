@@ -1,0 +1,71 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1>Edit Log</h1>
+  </div>
+</div>
+{% if error %}
+<div class="container">
+  <div class="row">
+    <div class="alert alert-danger" role="alert">
+      Please check your inputs and retry
+    </div>
+  </div>
+</div>
+{% endif %}
+<div class="container">
+  <div class="row">
+    <form action="/logdetail/{{ entry.id }}" method="POST" class="box">
+      <div class="col-auto">
+        <label name="project" class="form-label">Project Name</label>
+        <input
+          name="project"
+          class="form-control"
+          id="project"
+          value="{{ entry.project if entry else '' }}"
+          required
+        />
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label name="date_started" class="form-label">Date Started</label>
+          <input
+            name="date_started"
+            type="datetime-local"
+            class="form-control"
+            id="date_started"
+            value="{{ entry.starttime if entry else '' }}"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label name="date_finished" class="form-label">Date Finished</label>
+          <input
+            name="date_finished"
+            type="datetime-local"
+            class="form-control"
+            id="date_finished"
+            value="{{ entry.endtime if entry else '' }}"
+            required
+          />
+        </div>
+      </div>
+      <div class="col-auto">
+        <label name="message" class="form-label">DevLog Message</label>
+        <input
+          name="message"
+          class="form-control"
+          id="message"
+          value="{{ entry.message if entry else '' }}"
+          required
+        />
+      </div>
+      <br />
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Update</button>
+      </div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+  </div>
+</div>
+{% endblock %}

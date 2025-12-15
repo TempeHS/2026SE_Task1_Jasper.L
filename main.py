@@ -234,10 +234,25 @@ def editlog(log_id):
         message = request.form["message"]
         editlog = dbHandler.editLog(id, project, starttime, endtime, message)
         if editlog:
-            return redirect("loghome.html")
+            return redirect("/loghome.html")
         else:
             return render_template("/editlog.html", error=True)
-    return render_template("/editlog.html")
+    entry = dbHandler.getLog(log_id)
+    if not entry:
+        return "Log not found", 404
+    if isinstance(entry["starttime"], str):
+        entry["starttime"] = datetime.strptime(
+            entry["starttime"], "%Y-%m-%dT%H:%M"
+        ).strftime("%Y-%m-%dT%H:%M")
+    else:
+        entry["starttime"] = entry["starttime"].strftime("%Y-%m-%dT%H:%M")
+    if isinstance(entry["endtime"], str):
+        entry["endtime"] = datetime.strptime(
+            entry["endtime"], "%Y-%m-%dT%H:%M"
+        ).strftime("%Y-%m-%dT%H:%M")
+    else:
+        entry["endtime"] = entry["endtime"].strftime("%Y-%m-%dT%H:%M")
+    return render_template("/editlog.html", entry=entry)
 
 
 # @app.route("/tfa.html", methods=["POST", "GET"])
