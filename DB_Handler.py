@@ -1,6 +1,8 @@
 import sqlite3 as sql
 import bcrypt
 from flask import g, current_app
+from datetime import datetime
+import math
 
 
 def newUser(name, email, password):
@@ -55,13 +57,14 @@ def getLogs():
     return [dict(r) for r in rows]
 
 
-def createLog(project, author, message, worktime):
+def createLog(project, author, starttime, endtime, message):
     con = get_db()
     cur = con.cursor()
     try:
+        worktime = hrs
         cur.execute(
-            "INSERT INTO logs (author, message, worktime, project) VALUES (?, ?, ?, ?)",
-            (author, message, worktime, project),
+            "INSERT INTO logs (author, message, worktime, starttime, endtime, project) VALUES (?, ?, ?, ?)",
+            (author, message, worktime, starttime, endtime, project),
         )
         con.commit()
         con.close()

@@ -7,7 +7,9 @@
 {% if error %}
 <div class="container">
   <div class="row">
-    <div class="alert alert-danger" role="alert">something messed up, check your inputs</div>
+    <div class="alert alert-danger" role="alert">
+      something messed up, check your inputs
+    </div>
   </div>
 </div>
 {% endif %}
@@ -16,31 +18,33 @@
     <form action="/createlog.html" method="POST" class="box">
       <div class="col-auto">
         <label name="project" class="form-label">Project Name</label>
-        <input
-          name="project"
-          class="form-control"
-          id="project"
-          required
-        />
-      <div class="col-auto">
-        <label name="worktime" class="form-label">Time Worked (in hours)</label>
-        <input
-          name="worktime"
-          type="number"
-          class="form-control"
-          id="worktime"
-          step="0.01"
-          placeholder="2.5"
-          required
-        />
+        <input name="project" class="form-control" id="project" required />
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label name="date_started" class="form-label">Date Started</label>
+          <input
+            name="date_started"
+            type="datetime-local"
+            class="form-control"
+            id="date_started"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label name="date_finished" class="form-label">Date Finished</label>
+          <input
+            name="date_finished"
+            type="datetime-local"
+            class="form-control"
+            id="date_finished"
+            required
+          />
+        </div>
+      </div>
       <div class="col-auto">
         <label name="message" class="form-label">DevLog Message</label>
-        <input
-          name="message"
-          class="form-control"
-          id="message"
-          required
-        />
+        <input name="message" class="form-control" id="message" required />
       </div>
       <br />
       <div class="col-auto">

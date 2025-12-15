@@ -151,11 +151,12 @@ def createlog():
     user_id = get_jwt_identity()
     if request.method == "POST":
         project = request.form["project"]
-        worktime = request.form["worktime"]
+        starttime = request.form["date_started"]
+        endtime = request.form["date_finished"]
         message = request.form["message"]
         claims = get_jwt()
         author = claims.get("name")
-        createlog = dbHandler.createLog(project, author, message, worktime)
+        createlog = dbHandler.createLog(project, author, starttime, endtime, message)
         if createlog:
             return redirect("loghome.html")
         else:
