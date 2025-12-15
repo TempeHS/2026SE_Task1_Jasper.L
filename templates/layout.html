@@ -17,8 +17,11 @@
   <body>
     {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
     include "partials/footer.html" %}
-    <script src="static/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/serviceWorker.js"></script>
-    <script src="static/js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/serviceWorker.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+      window.STATIC_ADDRESS = "{{ url_for('static', filename='') }}";
+    </script>
   </body>
 </html>

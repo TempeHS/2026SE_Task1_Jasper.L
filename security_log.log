@@ -3561,3 +3561,23 @@
 2025-12-15 00:00:50,957 127.0.0.1 - - [15/Dec/2025 00:00:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-12-15 00:00:50,998 127.0.0.1 - - [15/Dec/2025 00:00:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-15 00:00:51,023 127.0.0.1 - - [15/Dec/2025 00:00:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-15 01:36:57,520 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.1.21:5000
+2025-12-15 01:36:57,567 [33mPress CTRL+C to quit[0m
+2025-12-15 01:36:57,570  * Restarting with stat
+2025-12-15 01:36:57,958  * Debugger is active!
+2025-12-15 01:36:57,959  * Debugger PIN: 233-274-384
+2025-12-15 01:37:01,788 127.0.0.1 - - [15/Dec/2025 01:37:01] "GET / HTTP/1.1" 200 -
+2025-12-15 01:37:01,992 127.0.0.1 - - [15/Dec/2025 01:37:01] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-15 01:37:01,993 127.0.0.1 - - [15/Dec/2025 01:37:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-15 01:37:02,210 127.0.0.1 - - [15/Dec/2025 01:37:02] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-12-15 01:37:02,341 127.0.0.1 - - [15/Dec/2025 01:37:02] "GET /static/js/serviceWorker.js HTTP/1.1" 200 -
+2025-12-15 01:37:02,448 127.0.0.1 - - [15/Dec/2025 01:37:02] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-12-15 01:37:02,481 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; img-src 'self' data: https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; frame-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; default-src 'self'; connect-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; style-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; media-src 'self'; object-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'","disposition":"enforce","blocked-uri":"inline","line-number":93,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-15 01:37:02,482 127.0.0.1 - - [15/Dec/2025 01:37:02] "POST /csp_report HTTP/1.1" 200 -
+2025-12-15 01:37:02,499 127.0.0.1 - - [15/Dec/2025 01:37:02] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2025-12-15 01:37:02,501 127.0.0.1 - - [15/Dec/2025 01:37:02] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-15 01:37:02,540 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; img-src 'self' data: https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; frame-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; default-src 'self'; connect-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; style-src 'self' https://gc.kis.v2.scr.kaspersky-labs.com wss://gc.kis.v2.scr.kaspersky-labs.com; media-src 'self'; object-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-15 01:37:02,540 127.0.0.1 - - [15/Dec/2025 01:37:02] "POST /csp_report HTTP/1.1" 200 -

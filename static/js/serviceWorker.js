@@ -1,18 +1,20 @@
+const addr = window.STATIC_ADDRESS | "";
+
 const assets = [
-    "/",
-    "static/css/style.css",
-    "static/css/style.css/bootstrap.min.css",
-    "static/js/bootstrap.bundle.min.js",
-    "static/js/app.js",
-    "static/images/logo.png",
-    "static/images/favicon.jpg",
-    "static/icons/icon-128x128.png",
-    "static/icons/icon-192x192.png",
-    "static/icons/icon-384x384.png",
-    "static/icons/icon-512x512.png",
-    "static/icons/desktop_screenshot.png",
-    "static/icons/mobile_screenshot.png"
-  ];
+  addr + "/",
+  addr + "css/style.css",
+  addr + "css/bootstrap.min.css",
+  addr + "js/bootstrap.bundle.min.js",
+  addr + "js/app.js",
+  addr + "images/logo.png",
+  addr + "images/favicon.jpg",
+  addr + "icons/icon-128x128.png",
+  addr + "icons/icon-192x192.png",
+  addr + "icons/icon-384x384.png",
+  addr + "icons/icon-512x512.png",
+  addr + "icons/desktop_screenshot.png",
+  addr + "icons/mobile_screenshot.png",
+];
 
 const CATALOGUE_ASSETS = "catalogue-assets";
 
@@ -21,7 +23,7 @@ self.addEventListener("install", (installEvt) => {
     caches
       .open(CATALOGUE_ASSETS)
       .then((cache) => {
-        console.log(cache)
+        console.log(cache);
         cache.addAll(assets);
       })
       .then(self.skipWaiting())
@@ -57,4 +59,4 @@ self.addEventListener("fetch", function (evt) {
       });
     })
   );
-})
+});
