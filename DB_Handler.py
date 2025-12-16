@@ -15,10 +15,8 @@ def newUser(name, email, password):
             (email, hashed, name),
         )
         con.commit()
-        con.close()
         return True
     except sql.IntegrityError:
-        con.close()
         return False
 
 
@@ -27,7 +25,6 @@ def getUser(email, password):
     cur = con.cursor()
     cur.execute("SELECT id, name, email, password FROM users WHERE email = ?", (email,))
     result = cur.fetchone()
-    con.close()
     if result is None:
         return None
     # Check password with bcrypt
@@ -78,10 +75,8 @@ def createLog(project, author, starttime, endtime, message):
             (author, message, worktime, starttime, endtime, project),
         )
         con.commit()
-        con.close()
         return True
     except sql.IntegrityError:
-        con.close()
         return False
 
 
@@ -99,7 +94,6 @@ def editLog(id, project, starttime, endtime, message):
             end = endtime
         time_diff = (end - start).total_seconds() / 3600
         if time_diff < 0:
-            con.close()
             return False
         worktime = round(time_diff * 4) / 4
         cur.execute(
@@ -107,10 +101,8 @@ def editLog(id, project, starttime, endtime, message):
             (project, message, worktime, starttime, endtime, id),
         )
         con.commit()
-        con.close()
         return True
     except sql.IntegrityError:
-        con.close()
         return False
 
 

@@ -237,10 +237,26 @@ def editlog(log_id):
         if editlog:
             return redirect("/loghome.html")
         else:
-            return render_template("/editlog.html", error=True)
+            # Get fresh entry from database to re-populate form
+            entry = dbHandler.getLog(log_id)
+            if entry:
+                # Format datetime fields for datetime-local input
+                if isinstance(entry["starttime"], str):
+                    entry["starttime"] = datetime.strptime(
+                        entry["starttime"], "%Y-%m-%dT%H:%M"
+                    ).strftime("%Y-%m-%dT%H:%M")
+                else:
+                    entry["starttime"] = entry["starttime"].strftime("%Y-%m-%dT%H:%M")
+                if isinstance(entry["endtime"], str):
+                    entry["endtime"] = datetime.strptime(
+                        entry["endtime"], "%Y-%m-%dT%H:%M"
+                    ).strftime("%Y-%m-%dT%H:%M")
+                else:
+                    entry["endtime"] = entry["endtime"].strftime("%Y-%m-%dT%H:%M")
+            return render_template("/editlog.html", error=True, entry=entry)
     entry = dbHandler.getLog(log_id)
     if not entry:
-        return "Log not found", 404
+        return render_template("/editlog.html", error=True, entry=None)
     if isinstance(entry["starttime"], str):
         entry["starttime"] = datetime.strptime(
             entry["starttime"], "%Y-%m-%dT%H:%M"
