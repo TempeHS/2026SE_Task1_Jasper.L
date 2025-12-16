@@ -29,6 +29,9 @@
     />
   </head>
   <body>
+    <div id="offline-banner" class="offline-banner" style="display: none">
+      <p>⚠️ You are currently offline. Showing cached content.</p>
+    </div>
     {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
     include "partials/footer.html" %}
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>

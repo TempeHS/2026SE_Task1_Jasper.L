@@ -5894,3 +5894,251 @@
 2025-12-16 01:26:17,176 127.0.0.1 - - [16/Dec/2025 01:26:17] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-16 01:26:17,199 127.0.0.1 - - [16/Dec/2025 01:26:17] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-12-16 01:26:17,232 127.0.0.1 - - [16/Dec/2025 01:26:17] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:38:16,702 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.189:5000
+2025-12-16 01:38:16,702 [33mPress CTRL+C to quit[0m
+2025-12-16 01:38:16,703  * Restarting with stat
+2025-12-16 01:38:16,929  * Debugger is active!
+2025-12-16 01:38:16,929  * Debugger PIN: 218-497-935
+2025-12-16 01:38:18,552 127.0.0.1 - - [16/Dec/2025 01:38:18] "GET / HTTP/1.1" 200 -
+2025-12-16 01:38:18,779 127.0.0.1 - - [16/Dec/2025 01:38:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:18,783 127.0.0.1 - - [16/Dec/2025 01:38:18] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-16 01:38:18,794 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:18,794 127.0.0.1 - - [16/Dec/2025 01:38:18] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:18,805 127.0.0.1 - - [16/Dec/2025 01:38:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:18,948 127.0.0.1 - - [16/Dec/2025 01:38:18] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:18,975 127.0.0.1 - - [16/Dec/2025 01:38:18] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-12-16 01:38:19,005 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:19,005 127.0.0.1 - - [16/Dec/2025 01:38:19] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:19,008 127.0.0.1 - - [16/Dec/2025 01:38:19] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:38:19,041 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:38:19,042 127.0.0.1 - - [16/Dec/2025 01:38:19] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:20,321 127.0.0.1 - - [16/Dec/2025 01:38:20] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:38:20,363 127.0.0.1 - - [16/Dec/2025 01:38:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:20,365 127.0.0.1 - - [16/Dec/2025 01:38:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:20,367 127.0.0.1 - - [16/Dec/2025 01:38:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:20,402 127.0.0.1 - - [16/Dec/2025 01:38:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:20,428 127.0.0.1 - - [16/Dec/2025 01:38:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:20,456 127.0.0.1 - - [16/Dec/2025 01:38:20] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:38:21,414 127.0.0.1 - - [16/Dec/2025 01:38:21] "GET / HTTP/1.1" 200 -
+2025-12-16 01:38:21,462 127.0.0.1 - - [16/Dec/2025 01:38:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:21,465 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:21,465 127.0.0.1 - - [16/Dec/2025 01:38:21] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:21,468 127.0.0.1 - - [16/Dec/2025 01:38:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:21,470 127.0.0.1 - - [16/Dec/2025 01:38:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:21,495 127.0.0.1 - - [16/Dec/2025 01:38:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:21,517 127.0.0.1 - - [16/Dec/2025 01:38:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:21,546 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:21,546 127.0.0.1 - - [16/Dec/2025 01:38:21] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:21,552 127.0.0.1 - - [16/Dec/2025 01:38:21] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:38:21,572 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:38:21,572 127.0.0.1 - - [16/Dec/2025 01:38:21] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:40,029 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.189:5000
+2025-12-16 01:38:40,030 [33mPress CTRL+C to quit[0m
+2025-12-16 01:38:40,031  * Restarting with stat
+2025-12-16 01:38:40,293  * Debugger is active!
+2025-12-16 01:38:40,293  * Debugger PIN: 218-497-935
+2025-12-16 01:38:41,247 127.0.0.1 - - [16/Dec/2025 01:38:41] "GET / HTTP/1.1" 200 -
+2025-12-16 01:38:41,322 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:41,323 127.0.0.1 - - [16/Dec/2025 01:38:41] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:41,341 127.0.0.1 - - [16/Dec/2025 01:38:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:41,341 127.0.0.1 - - [16/Dec/2025 01:38:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:41,394 127.0.0.1 - - [16/Dec/2025 01:38:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:41,485 127.0.0.1 - - [16/Dec/2025 01:38:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:41,511 127.0.0.1 - - [16/Dec/2025 01:38:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:38:41,536 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:38:41,537 127.0.0.1 - - [16/Dec/2025 01:38:41] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:41,542 127.0.0.1 - - [16/Dec/2025 01:38:41] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:38:41,562 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:38:41,563 127.0.0.1 - - [16/Dec/2025 01:38:41] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:38:44,793 127.0.0.1 - - [16/Dec/2025 01:38:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:44,801 127.0.0.1 - - [16/Dec/2025 01:38:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:38:44,867 127.0.0.1 - - [16/Dec/2025 01:38:44] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:38:44,876 127.0.0.1 - - [16/Dec/2025 01:38:44] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:38:53,539 127.0.0.1 - - [16/Dec/2025 01:38:53] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:38:53,542 127.0.0.1 - - [16/Dec/2025 01:38:53] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:38:53,566 127.0.0.1 - - [16/Dec/2025 01:38:53] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:07,259 127.0.0.1 - - [16/Dec/2025 01:39:07] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:39:08,499 127.0.0.1 - - [16/Dec/2025 01:39:08] "GET / HTTP/1.1" 200 -
+2025-12-16 01:39:10,604 127.0.0.1 - - [16/Dec/2025 01:39:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:10,607 127.0.0.1 - - [16/Dec/2025 01:39:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:10,610 127.0.0.1 - - [16/Dec/2025 01:39:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:10,613 127.0.0.1 - - [16/Dec/2025 01:39:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:10,615 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:39:10,615 127.0.0.1 - - [16/Dec/2025 01:39:10] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:39:10,618 127.0.0.1 - - [16/Dec/2025 01:39:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:12,671 127.0.0.1 - - [16/Dec/2025 01:39:12] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:12,687 127.0.0.1 - - [16/Dec/2025 01:39:12] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:12,745 127.0.0.1 - - [16/Dec/2025 01:39:12] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-16 01:39:12,747 127.0.0.1 - - [16/Dec/2025 01:39:12] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:39:12,763 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:39:12,763 127.0.0.1 - - [16/Dec/2025 01:39:12] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:39:36,776 127.0.0.1 - - [16/Dec/2025 01:39:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:36,780 127.0.0.1 - - [16/Dec/2025 01:39:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:36,788 127.0.0.1 - - [16/Dec/2025 01:39:36] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:36,830 127.0.0.1 - - [16/Dec/2025 01:39:36] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:48,379 127.0.0.1 - - [16/Dec/2025 01:39:48] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:39:48,479 127.0.0.1 - - [16/Dec/2025 01:39:48] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-12-16 01:39:48,482 127.0.0.1 - - [16/Dec/2025 01:39:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:48,484 127.0.0.1 - - [16/Dec/2025 01:39:48] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-16 01:39:48,591 127.0.0.1 - - [16/Dec/2025 01:39:48] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:48,605 127.0.0.1 - - [16/Dec/2025 01:39:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:48,608 127.0.0.1 - - [16/Dec/2025 01:39:48] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:48,640 127.0.0.1 - - [16/Dec/2025 01:39:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:48,671 127.0.0.1 - - [16/Dec/2025 01:39:48] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-16 01:39:48,682 127.0.0.1 - - [16/Dec/2025 01:39:48] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:39:55,022 127.0.0.1 - - [16/Dec/2025 01:39:55] "GET / HTTP/1.1" 200 -
+2025-12-16 01:39:55,124 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:39:55,124 127.0.0.1 - - [16/Dec/2025 01:39:55] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:39:55,136 127.0.0.1 - - [16/Dec/2025 01:39:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:55,143 127.0.0.1 - - [16/Dec/2025 01:39:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:55,145 127.0.0.1 - - [16/Dec/2025 01:39:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:39:55,188 127.0.0.1 - - [16/Dec/2025 01:39:55] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:55,192 127.0.0.1 - - [16/Dec/2025 01:39:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:55,197 127.0.0.1 - - [16/Dec/2025 01:39:55] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
+2025-12-16 01:39:55,220 127.0.0.1 - - [16/Dec/2025 01:39:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:39:55,247 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:39:55,248 127.0.0.1 - - [16/Dec/2025 01:39:55] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:39:55,249 127.0.0.1 - - [16/Dec/2025 01:39:55] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:39:55,271 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:39:55,271 127.0.0.1 - - [16/Dec/2025 01:39:55] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:14,323 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.0.189:5000
+2025-12-16 01:40:14,323 [33mPress CTRL+C to quit[0m
+2025-12-16 01:40:14,324  * Restarting with stat
+2025-12-16 01:40:14,550  * Debugger is active!
+2025-12-16 01:40:14,550  * Debugger PIN: 218-497-935
+2025-12-16 01:40:15,973 127.0.0.1 - - [16/Dec/2025 01:40:15] "GET / HTTP/1.1" 200 -
+2025-12-16 01:40:16,054 127.0.0.1 - - [16/Dec/2025 01:40:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:16,055 127.0.0.1 - - [16/Dec/2025 01:40:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:16,056 127.0.0.1 - - [16/Dec/2025 01:40:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:16,057 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:16,057 127.0.0.1 - - [16/Dec/2025 01:40:16] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:16,130 127.0.0.1 - - [16/Dec/2025 01:40:16] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:16,152 127.0.0.1 - - [16/Dec/2025 01:40:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:16,182 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:16,183 127.0.0.1 - - [16/Dec/2025 01:40:16] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:16,186 127.0.0.1 - - [16/Dec/2025 01:40:16] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:16,217 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:40:16,217 127.0.0.1 - - [16/Dec/2025 01:40:16] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:25,819 127.0.0.1 - - [16/Dec/2025 01:40:25] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:40:25,864 127.0.0.1 - - [16/Dec/2025 01:40:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:25,866 127.0.0.1 - - [16/Dec/2025 01:40:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:25,869 127.0.0.1 - - [16/Dec/2025 01:40:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:25,898 127.0.0.1 - - [16/Dec/2025 01:40:25] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:25,923 127.0.0.1 - - [16/Dec/2025 01:40:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:25,954 127.0.0.1 - - [16/Dec/2025 01:40:25] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:26,379 127.0.0.1 - - [16/Dec/2025 01:40:26] "GET / HTTP/1.1" 200 -
+2025-12-16 01:40:26,432 127.0.0.1 - - [16/Dec/2025 01:40:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:26,434 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:26,434 127.0.0.1 - - [16/Dec/2025 01:40:26] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:26,437 127.0.0.1 - - [16/Dec/2025 01:40:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:26,439 127.0.0.1 - - [16/Dec/2025 01:40:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:26,470 127.0.0.1 - - [16/Dec/2025 01:40:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:26,499 127.0.0.1 - - [16/Dec/2025 01:40:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:26,532 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:26,532 127.0.0.1 - - [16/Dec/2025 01:40:26] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:26,536 127.0.0.1 - - [16/Dec/2025 01:40:26] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:26,556 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:40:26,556 127.0.0.1 - - [16/Dec/2025 01:40:26] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:27,183 127.0.0.1 - - [16/Dec/2025 01:40:27] "GET /signup.html HTTP/1.1" 200 -
+2025-12-16 01:40:27,227 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,230 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,233 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,263 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,287 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,317 127.0.0.1 - - [16/Dec/2025 01:40:27] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:27,718 127.0.0.1 - - [16/Dec/2025 01:40:27] "GET /signup.html HTTP/1.1" 200 -
+2025-12-16 01:40:27,763 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,766 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,768 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,798 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,819 127.0.0.1 - - [16/Dec/2025 01:40:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:27,850 127.0.0.1 - - [16/Dec/2025 01:40:27] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:28,180 127.0.0.1 - - [16/Dec/2025 01:40:28] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:40:28,227 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,230 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,233 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,260 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,284 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,311 127.0.0.1 - - [16/Dec/2025 01:40:28] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:28,677 127.0.0.1 - - [16/Dec/2025 01:40:28] "GET / HTTP/1.1" 200 -
+2025-12-16 01:40:28,729 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,733 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,736 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:28,736 127.0.0.1 - - [16/Dec/2025 01:40:28] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:28,741 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,765 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,791 127.0.0.1 - - [16/Dec/2025 01:40:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:40:28,826 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:40:28,826 127.0.0.1 - - [16/Dec/2025 01:40:28] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:40:28,839 127.0.0.1 - - [16/Dec/2025 01:40:28] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:40:28,844 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:40:28,844 127.0.0.1 - - [16/Dec/2025 01:40:28] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:10,793 127.0.0.1 - - [16/Dec/2025 01:41:10] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:41:10,846 127.0.0.1 - - [16/Dec/2025 01:41:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:10,849 127.0.0.1 - - [16/Dec/2025 01:41:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:10,851 127.0.0.1 - - [16/Dec/2025 01:41:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:10,882 127.0.0.1 - - [16/Dec/2025 01:41:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:10,904 127.0.0.1 - - [16/Dec/2025 01:41:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:10,932 127.0.0.1 - - [16/Dec/2025 01:41:10] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:11,603 127.0.0.1 - - [16/Dec/2025 01:41:11] "GET / HTTP/1.1" 200 -
+2025-12-16 01:41:11,654 127.0.0.1 - - [16/Dec/2025 01:41:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:11,657 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:11,658 127.0.0.1 - - [16/Dec/2025 01:41:11] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:11,660 127.0.0.1 - - [16/Dec/2025 01:41:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:11,662 127.0.0.1 - - [16/Dec/2025 01:41:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:11,690 127.0.0.1 - - [16/Dec/2025 01:41:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:11,713 127.0.0.1 - - [16/Dec/2025 01:41:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:11,739 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:11,739 127.0.0.1 - - [16/Dec/2025 01:41:11] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:11,740 127.0.0.1 - - [16/Dec/2025 01:41:11] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:11,761 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:41:11,761 127.0.0.1 - - [16/Dec/2025 01:41:11] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:12,433 127.0.0.1 - - [16/Dec/2025 01:41:12] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:41:12,478 127.0.0.1 - - [16/Dec/2025 01:41:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:12,481 127.0.0.1 - - [16/Dec/2025 01:41:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:12,483 127.0.0.1 - - [16/Dec/2025 01:41:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:12,510 127.0.0.1 - - [16/Dec/2025 01:41:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:12,533 127.0.0.1 - - [16/Dec/2025 01:41:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:12,561 127.0.0.1 - - [16/Dec/2025 01:41:12] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:13,287 127.0.0.1 - - [16/Dec/2025 01:41:13] "GET / HTTP/1.1" 200 -
+2025-12-16 01:41:13,344 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:13,344 127.0.0.1 - - [16/Dec/2025 01:41:13] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:13,347 127.0.0.1 - - [16/Dec/2025 01:41:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:13,350 127.0.0.1 - - [16/Dec/2025 01:41:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:13,353 127.0.0.1 - - [16/Dec/2025 01:41:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:13,384 127.0.0.1 - - [16/Dec/2025 01:41:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:13,407 127.0.0.1 - - [16/Dec/2025 01:41:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:13,434 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:13,434 127.0.0.1 - - [16/Dec/2025 01:41:13] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:13,437 127.0.0.1 - - [16/Dec/2025 01:41:13] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:13,460 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:41:13,460 127.0.0.1 - - [16/Dec/2025 01:41:13] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:16,261 127.0.0.1 - - [16/Dec/2025 01:41:16] "GET /login.html HTTP/1.1" 200 -
+2025-12-16 01:41:16,309 127.0.0.1 - - [16/Dec/2025 01:41:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:16,312 127.0.0.1 - - [16/Dec/2025 01:41:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:16,314 127.0.0.1 - - [16/Dec/2025 01:41:16] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:16,345 127.0.0.1 - - [16/Dec/2025 01:41:16] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:16,369 127.0.0.1 - - [16/Dec/2025 01:41:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:16,401 127.0.0.1 - - [16/Dec/2025 01:41:16] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:26,619 127.0.0.1 - - [16/Dec/2025 01:41:26] "GET / HTTP/1.1" 200 -
+2025-12-16 01:41:26,672 127.0.0.1 - - [16/Dec/2025 01:41:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:26,674 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":32,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:26,674 127.0.0.1 - - [16/Dec/2025 01:41:26] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:26,677 127.0.0.1 - - [16/Dec/2025 01:41:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-16 01:41:26,679 127.0.0.1 - - [16/Dec/2025 01:41:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:26,710 127.0.0.1 - - [16/Dec/2025 01:41:26] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:26,736 127.0.0.1 - - [16/Dec/2025 01:41:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-16 01:41:26,761 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"script-src-elem","effective-directive":"script-src-elem","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"inline","line-number":87,"source-file":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","status-code":200,"script-sample":""}}
+2025-12-16 01:41:26,762 127.0.0.1 - - [16/Dec/2025 01:41:26] "POST /csp_report HTTP/1.1" 200 -
+2025-12-16 01:41:26,769 127.0.0.1 - - [16/Dec/2025 01:41:26] "[33mGET /js/serviceWorker.js HTTP/1.1[0m" 404 -
+2025-12-16 01:41:26,793 {"csp-report":{"document-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/","referrer":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://upgraded-acorn-444pgxprxxpf7p5w-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-16 01:41:26,793 127.0.0.1 - - [16/Dec/2025 01:41:26] "POST /csp_report HTTP/1.1" 200 -
