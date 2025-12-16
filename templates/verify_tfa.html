@@ -1,0 +1,26 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="column">
+    <h1>Two-Factor Authentication</h1>
+    <p>Enter the 6-digit code from your authenticator app</p>
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+      <label for="otp">Authentication Code:</label><br />
+      <input
+        type="text"
+        id="otp"
+        name="otp"
+        maxlength="6"
+        pattern="\d{6}"
+        required
+        autofocus
+      /><br /><br />
+      <input type="submit" value="Verify" />
+    </form>
+    <p><a href="/login.html">Back to Login</a></p>
+  </div>
+</div>
+{% endblock %}

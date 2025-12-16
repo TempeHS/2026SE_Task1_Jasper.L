@@ -121,25 +121,59 @@ def login():
         password = request.form["password"]
         user_data = dbHandler.getUser(email, password)
         if user_data:
-            access_token = create_access_token(
-                identity=str(email),
-                additional_claims={"email": email, "name": user_data["name"]},
-            )
-            response = make_response(redirect("/loghome.html"))
-            response.set_cookie(
-                "access_token_cookie",
-                access_token,
-                httponly=True,
-                secure=True,
-                samesite="Lax",
-                max_age=3600,
-            )
-            return response
+            # Check if user has 2FA enabled
+            totp_data = dbHandler.getUserTOTP(email)
+            if totp_data and totp_data["tfa_enabled"]:
+                # 2FA is enabled, proceed to verification
+                session["pending_2fa_email"] = email
+                session["pending_2fa_name"] = user_data["name"]
+                return redirect("/verify_tfa.html")
+            else:
+                # 2FA not enabled - redirect to setup (mandatory)
+                session["pending_2fa_email"] = email
+                session["pending_2fa_name"] = user_data["name"]
+                return redirect("/setup_2fa.html?mandatory=true")
         else:
             error = "Incorrect username or password"
             return render_template("/login.html", error=error)
     error = request.args.get("error")
     return render_template("/login.html", error=error)
+
+
+@app.route("/verify_tfa.html", methods=["GET", "POST"])
+def verify_tfa():
+    if "pending_2fa_email" not in session:
+        return redirect("/login.html")
+    if request.method == "POST":
+        otp_input = request.form["otp"]
+        email = session["pending_2fa_email"]
+        name = session["pending_2fa_name"]
+        totp_data = dbHandler.getUserTOTP(email)
+        if totp_data and totp_data["totp_secret"]:
+            totp = pyotp.TOTP(totp_data["totp_secret"])
+            if totp.verify(otp_input, valid_window=1):
+                # Clear session data
+                session.pop("pending_2fa_email", None)
+                session.pop("pending_2fa_name", None)
+                # Create JWT and login
+                access_token = create_access_token(
+                    identity=str(email),
+                    additional_claims={"email": email, "name": name},
+                )
+                response = make_response(redirect("/loghome.html"))
+                response.set_cookie(
+                    "access_token_cookie",
+                    access_token,
+                    httponly=True,
+                    secure=True,
+                    samesite="Lax",
+                    max_age=3600,
+                )
+                return response
+            else:
+                error = "Invalid OTP code"
+                return render_template("/verify_tfa.html", error=error)
+    return render_template("/verify_tfa.html")
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
@@ -291,23 +325,82 @@ def editlog(log_id):
     return render_template("/editlog.html", entry=entry)
 
 
-# @app.route("/tfa.html", methods=["POST", "GET"])
-# def home():
-#     user_secret = pyotp.random_base32()
-#     totp = pyotp.TOTP(user_secret)
-#     totp = pyotp.TOTP(user_secret)
-#     otp_uri = totp.provisioning_uri(name=username, issuer_name="Devlog App")
-#     qr_code = pyqrcode.create(otp_uri)
-#     stream = BytesIO()
-#     qr_code.png(stream, scale=5)
-#     qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
-#     if request.method == "POST":
-#         otp_input = request.form["otp"]
-#         if totp.verify(otp_input):
-#             return render_template("/loghome.html")
-#         else:
-#             return "Invalid OTP. Please try again.", 401
-#     return render_template("/tfa.html")
+@app.route("/setup_2fa.html", methods=["GET", "POST"])
+def setup_2fa():
+    # Check if this is mandatory setup or logged-in user
+    mandatory = request.args.get("mandatory") == "true"
+
+    if mandatory:
+        # User must set up 2FA before logging in
+        if "pending_2fa_email" not in session:
+            return redirect("/login.html")
+        email = session["pending_2fa_email"]
+        name = session["pending_2fa_name"]
+    else:
+        # This shouldn't happen anymore, but keep for safety
+        return redirect("/loghome.html")
+
+    if request.method == "POST":
+        otp_input = request.form["otp"]
+        user_secret = session.get("temp_totp_secret")
+
+        if user_secret:
+            totp = pyotp.TOTP(user_secret)
+            if totp.verify(otp_input, valid_window=1):
+                # Save the secret to database
+                if dbHandler.updateUserTOTP(email, user_secret):
+                    session.pop("temp_totp_secret", None)
+                    session.pop("temp_qr_code", None)
+                    session.pop("pending_2fa_email", None)
+                    session.pop("pending_2fa_name", None)
+                    app_log.info(f"2FA enabled for user: {email}")
+
+                    # Create JWT and login automatically
+                    access_token = create_access_token(
+                        identity=str(email),
+                        additional_claims={"email": email, "name": name},
+                    )
+                    response = make_response(redirect("/loghome.html"))
+                    response.set_cookie(
+                        "access_token_cookie",
+                        access_token,
+                        httponly=True,
+                        secure=True,
+                        samesite="Lax",
+                        max_age=3600,
+                    )
+                    return response
+                else:
+                    error = "Failed to enable 2FA"
+                    return render_template(
+                        "/setup_tfa.html",
+                        error=error,
+                        qr_code=session.get("temp_qr_code"),
+                        mandatory=True,
+                    )
+            else:
+                error = "Invalid OTP code. Please try again."
+                return render_template(
+                    "/setup_tfa.html",
+                    error=error,
+                    qr_code=session.get("temp_qr_code"),
+                    mandatory=True,
+                )
+
+    # Generate new secret
+    user_secret = pyotp.random_base32()
+    totp = pyotp.TOTP(user_secret)
+    otp_uri = totp.provisioning_uri(name=email, issuer_name="Devlog App")
+    qr_code = pyqrcode.create(otp_uri)
+    stream = BytesIO()
+    qr_code.png(stream, scale=5)
+    qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
+
+    # Store temporarily in session
+    session["temp_totp_secret"] = user_secret
+    session["temp_qr_code"] = qr_code_b64
+
+    return render_template("/setup_tfa.html", qr_code=qr_code_b64, mandatory=True)
 
 
 # example CSRF protected form

@@ -140,9 +140,39 @@ def getLog(log_id):
     return None
 
 
-# def getUsers():
-#     con = sql.connect("databaseFiles/database.db")
-#     cur = con.cursor()
-#     cur.execute("SELECT * FROM id7-tusers")
-#     con.close()
-#     return cur
+def updateUserTOTP(email, secret):
+    con = get_db()
+    cur = con.cursor()
+    try:
+        cur.execute(
+            "UPDATE users SET totp_secret = ?, tfa_enabled = 1 WHERE email = ?",
+            (secret, email),
+        )
+        con.commit()
+        return True
+    except:
+        return False
+
+
+def getUserTOTP(email):
+    con = get_db()
+    cur = con.cursor()
+    cur.execute("SELECT totp_secret, tfa_enabled FROM users WHERE email = ?", (email,))
+    result = cur.fetchone()
+    if result:
+        return {"totp_secret": result[0], "tfa_enabled": result[1]}
+    return None
+
+
+def disable2FA(email):
+    con = get_db()
+    cur = con.cursor()
+    try:
+        cur.execute(
+            "UPDATE users SET totp_secret = NULL, tfa_enabled = 0 WHERE email = ?",
+            (email,),
+        )
+        con.commit()
+        return True
+    except:
+        return False

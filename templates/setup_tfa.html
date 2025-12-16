@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="column">
+    <h1>Enable Two-Factor Authentication</h1>
+    <p><strong>Two-Factor Authentication is required for all accounts.</strong></p>
+    <p>
+      Scan this QR code with your authenticator app (Google Authenticator,
+      Authy, etc.)
+    </p>
+    <img src="data:image/png;base64,{{ qr_code }}" alt="2FA QR Code" />
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+      <label for="otp">Enter the 6-digit code from your app to confirm:</label
+      ><br />
+      <input
+        type="text"
+        id="otp"
+        name="otp"
+        maxlength="6"
+        pattern="\d{6}"
+        required
+      /><br /><br />
+      <input type="submit" value="Enable 2FA" />
+    </form>
+  </div>
+</div>
+{% endblock %}
