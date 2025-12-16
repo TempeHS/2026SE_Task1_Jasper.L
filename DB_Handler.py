@@ -47,9 +47,33 @@ def close_db(e=None):
         db.close()
 
 
-def getLogs():
+def getLogs(
+    order_by="created",
+    order_dir="DESC",
+    filter_author=None,
+    filter_project=None,
+    filter_date=None,
+):
     con = get_db()
-    cur = con.execute("SELECT * FROM logs ORDER BY created DESC")
+    valid_columns = ["created", "author", "project", "worktime"]
+    if order_by not in valid_columns:
+        order_by = "created"
+    order_dir = "DESC" if order_dir.upper() == "DESC" else "ASC"
+    query = "SELECT * FROM logs WHERE 1=1"
+    params = []
+    filters = [
+        (filter_author, "author"),
+        (filter_project, "project"),
+    ]
+    for filter_value, column_name in filters:
+        if filter_value:
+            query += f" AND {column_name} LIKE ?"
+            params.append(f"%{filter_value}%")
+    if filter_date:
+        query += " AND DATE(created) = ?"
+        params.append(filter_date)
+    query += f" ORDER BY {order_by} {order_dir}"
+    cur = con.execute(query, params)
     rows = cur.fetchall()
     return [dict(r) for r in rows]
 

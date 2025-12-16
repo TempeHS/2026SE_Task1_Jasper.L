@@ -162,7 +162,18 @@ def signup():
 @jwt_required()
 def loghome():
     user_id = get_jwt_identity()
-    entries = dbHandler.getLogs()
+    order_by = request.args.get("order_by", "created")
+    order_dir = request.args.get("order_dir", "DESC")
+    filter_author = request.args.get("filter_author", "")
+    filter_project = request.args.get("filter_project", "")
+    filter_date = request.args.get("filter_date", "")
+    entries = dbHandler.getLogs(
+        order_by=order_by,
+        order_dir=order_dir,
+        filter_author=filter_author if filter_author else None,
+        filter_project=filter_project if filter_project else None,
+        filter_date=filter_date if filter_date else None,
+    )
     for entry in entries:
         if isinstance(entry["created"], str):
             entry["created"] = datetime.strptime(entry["created"], "%Y-%m-%d %H:%M:%S")
@@ -170,7 +181,15 @@ def loghome():
             entry["starttime"] = datetime.strptime(entry["starttime"], "%Y-%m-%dT%H:%M")
         if isinstance(entry["endtime"], str):
             entry["endtime"] = datetime.strptime(entry["endtime"], "%Y-%m-%dT%H:%M")
-    return render_template("/loghome.html", entries=entries)
+    return render_template(
+        "/loghome.html",
+        entries=entries,
+        order_by=order_by,
+        order_dir=order_dir,
+        filter_author=filter_author,
+        filter_project=filter_project,
+        filter_date=filter_date,
+    )
 
 
 @app.route("/createlog.html", methods=["GET", "POST"])
